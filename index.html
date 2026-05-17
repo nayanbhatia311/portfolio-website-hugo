@@ -14,13 +14,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>Nayan Bhatia</title>
-    <meta name="description" content="Portfolio of Nayan Bhatia : PhD researcher in WiFi sensing, AI systems, and student support platforms.">
+    <meta name="description" content="Nayan Bhatia is a UC Santa Cruz CSE PhD candidate building WiFi sensing systems, LLM-based indoor localization, contactless vital-sign monitoring, and UC-wide student support platforms.">
     <meta name="author" content="Nayan Bhatia">
+    <meta property="og:title" content="Nayan Bhatia">
+    <meta property="og:description" content="WiFi sensing, AI systems, and UC-wide student support platforms by Nayan Bhatia.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nayanbhatia.com">
+    <meta property="og:image" content="https://news.ucsc.edu/wp-content/uploads/2025/08/20250814-Pulse-Fi-Research-EC-08-scaled-e1756416372585.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nayan Bhatia">
+    <meta name="twitter:description" content="WiFi sensing, AI systems, and UC-wide student support platforms.">
+    <meta name="twitter:image" content="https://news.ucsc.edu/wp-content/uploads/2025/08/20250814-Pulse-Fi-Research-EC-08-scaled-e1756416372585.jpg">
 
+    <link rel="canonical" href="https://nayanbhatia.com">
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="/sass/researcher.min.css">
+    <link rel="stylesheet" href="sass/researcher.min.css">
+    <style>
+        .lede { font-size: 1.08rem; }
+        .proof-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1rem; margin: 1rem 0 1.5rem; }
+        .proof-card { border: 1px solid #e5e5e5; border-radius: 6px; overflow: hidden; background: #fff; }
+        #content .proof-card img { width: 100%; height: 145px; object-fit: cover; display: block; margin: 0; background: #f4f4f4; }
+        #content .proof-card img.contain-img { height: 190px; object-fit: contain; background: #f8f8f8; }
+        #content .proof-card img.portrait-crop { object-position: center 35%; }
+        .proof-card div { padding: 0.75rem; }
+        .proof-card strong { display: block; margin-bottom: 0.2rem; }
+        .proof-card p { margin: 0; font-size: 0.92rem; line-height: 1.35; }
+        .project-links { display: inline; }
+        .project-links a { white-space: nowrap; }
+        .media-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 0.75rem 0; }
+        .media-row a { display: inline-block; }
+        #content .media-row img { height: 140px; width: auto; max-width: 100%; border-radius: 6px; object-fit: cover; margin: 0; }
+        .media-caption { display: block; color: #666; font-size: 0.85rem; margin-top: 0.25rem; max-width: 250px; }
+        .feature-image { margin: 0.75rem 0; }
+        #content .feature-image img { border-radius: 6px; max-height: 260px; object-fit: contain; margin: 0; background: #f8f8f8; }
+        .citation { border: 1px solid #e5e5e5; border-radius: 6px; padding: 0.75rem; margin: 0.75rem 0; background: #fff; }
+        .citation strong { display: block; margin-bottom: 0.35rem; }
+        .citation button { border: 1px solid #ccc; border-radius: 4px; background: #f8f8f8; padding: 0.15rem 0.45rem; margin-bottom: 0.5rem; cursor: pointer; }
+        #content .citation pre { white-space: pre-wrap; word-break: break-word; margin: 0; background: #f8f8f8; border: 1px solid #eee; border-radius: 4px; padding: 0.5rem; }
+        .compact-list li { margin-bottom: 0.55rem; }
+        .navbar-nav { gap: 0.75rem; }
+        @media (max-width: 575.98px) {
+            #content .avatar>img { float: none; margin: 0 auto 1rem; height: 140px; width: 140px; }
+            .navbar-nav { gap: 1rem; }
+            .proof-grid { grid-template-columns: 1fr; }
+            #content .feature-image img { max-height: none; width: 100%; }
+        }
+    </style>
 </head>
 
 <body>
@@ -30,7 +71,8 @@
                 Nayan Bhatia
             </a>
             <div class="navbar-nav flex-row flex-wrap justify-content-center">
-                <a class="nav-item nav-link" href="pdfs/NayanBhatia_PhD_CSE_UCSC_June2027.pdf" title="CV">Resume</a>
+                <a class="nav-item nav-link" href="https://scholar.google.com/citations?user=V7ODNwIAAAAJ&hl=en" title="Google Scholar">Google Scholar</a>
+                <a class="nav-item nav-link" href="pdfs/NayanBhatia_PhD_CSE_UCSC_June2027.pdf" title="Resume">Resume</a>
             </div>
         </nav>
     </div>
@@ -39,44 +81,329 @@
         <div class="container">
             <h2 id="about-me">About Me</h2>
             <figure class="avatar">
-                <img src="/bhatia.png" alt="avatar" class="img-fluid rounded-circle">
+                <img src="bhatia.png" alt="Nayan Bhatia" class="img-fluid rounded-circle">
             </figure>
-            <p>
-                I am Nayan Bhatia, a PhD candidate in Computer Science & Engineering at UC Santa Cruz, where I work in the 
-                <a href="https://inrg.engineering.ucsc.edu/people/nayan-bhatia/">Inter-Networking Research Group (i-NRG Lab)</a> 
-                under Prof. Katia Obraczka. My research pushes the boundaries of what WiFi can sense from 
-                <strong>indoor localization</strong> to <strong>contactless health monitoring</strong> by treating wireless 
-                telemetry like a new language for AI systems.
+            <p class="lede">
+                I am a Computer Science &amp; Engineering PhD candidate at UC Santa Cruz, advised by
+                <a href="https://scholar.google.com/citations?user=xALG_EMAAAAJ">Prof. Katia Obraczka</a> in the
+                <a href="https://inrg.engineering.ucsc.edu/people/nayan-bhatia/">Inter-Networking Research Group (i-NRG)</a>.
+                My work turns commodity wireless telemetry into practical sensing systems, from LLM-based indoor localization
+                to contactless vital-sign monitoring.
             </p>
             <p>
-                I also lead development of the <a href="http://ucbasicneeds.ucsc.edu">UC Basic Needs Platform</a> and the 
-                <a href="http://cloud.onyx.app/anonymous/ucbn">UC Essential Needs Navigator</a>, tools that support over 300,000 
-                UC students by connecting them to food, housing, and financial aid resources. My work blends research, engineering, 
-                and social impact — building systems that are both technically rigorous and practically transformative.
+                I develop and maintain the University of California's Essential Needs web app ecosystem, including the
+                <a href="https://ucbasicneeds.ucsc.edu">UC Essential Needs Directory</a> and
+                <a href="https://ucbasicneeds.ucsc.edu/ucen">UC Essential Needs Navigator</a>. UC Santa Cruz News reports that I
+                developed the directory and AI-powered Navigator and implemented the complete technical system with campus partners.
+                The platform serves a UC system that enrolled <a href="https://www.universityofcalifornia.edu/press-room/university-california-sets-enrollment-records">301,093 students in fall 2025</a>.
             </p>
 
-            <h2 id="research-interests">Research & Projects</h2>
-            <ul>
-                <li><strong>WiFiGPT</strong>: LLM-based indoor localization from WiFi telemetry (CSI, RSSI, FTM), achieving centimeter-level precision.</li>
-                <li><strong>Pulse-Fi</strong>: Contactless vital signs monitoring with ESP32 & Raspberry Pi, featured in UC News, CNET, Tom’s Hardware, and Yahoo Tech.</li>
-                <li><strong>UC Essential Needs Navigator</strong>: AI-powered search assistant for UC students, providing natural-language access to basic needs resources.</li>
+            <div class="proof-grid" aria-label="Selected media and evidence">
+                <a class="proof-card" href="https://news.ucsc.edu/2025/09/pulse-fi-wifi-heart-rate/">
+                    <img src="https://news.ucsc.edu/wp-content/uploads/2025/08/20250814-Pulse-Fi-Research-EC-08-scaled-e1756416372585.jpg" alt="Pulse-Fi demo with WiFi hardware and heart-rate signal">
+                    <div>
+                        <strong>Pulse-Fi in UCSC News</strong>
+                        <p>Contactless heart-rate monitoring from low-cost WiFi devices.</p>
+                    </div>
+                </a>
+                <a class="proof-card" href="https://www.linkedin.com/posts/nayan-bhatia_indoor-localization-using-compact-telemetry-agnostic-activity-7426308848866746369-R3nw">
+                    <img src="locaris-percom-poster.jpg" alt="Nayan Bhatia presenting the Locaris poster at PerCom 2026">
+                    <div>
+                        <strong>Locaris at PerCom</strong>
+                        <p>WiP paper presented at IEEE PerCom 2026.</p>
+                    </div>
+                </a>
+                <a class="proof-card" href="https://news.ucsc.edu/2026/01/new-basic-needs-directory-provides-uc-students-with-one-stop-shop-for-resource-information/">
+                    <img src="https://news.ucsc.edu/wp-content/uploads/2026/01/BN-Directory-and-Tool-Team-Tim-G-Nayan-Bhatia-Rishita-Wairagade-Kaushik-Hariharan-1024x768.jpg" alt="UC Essential Needs Directory and Navigator development team">
+                    <div>
+                        <strong>UC Essential Needs launch</strong>
+                        <p>Public launch story for the UC-wide directory and AI Navigator.</p>
+                    </div>
+                </a>
+                <a class="proof-card" href="https://qb3.ucsc.edu/fellows/2025/12/nayan-bhatia-qb3-fellows-2026/">
+                    <img src="https://qb3.ucsc.edu/files/2025/11/C26FE08F-DF64-4230-9B7F-D8ADBFAB0009-Copy.jpg" alt="Nayan Bhatia portrait for QB3 fellowship profile" class="contain-img">
+                    <div>
+                        <strong>QB3 Innovators Fellow</strong>
+                        <p>PulseFi commercialization and translational health-tech fellowship.</p>
+                    </div>
+                </a>
+                <a class="proof-card" href="https://youtu.be/3pCCZJbQK30">
+                    <img src="https://i.ytimg.com/vi/3pCCZJbQK30/hqdefault.jpg" alt="Project Deep Blue winning project thumbnail">
+                    <div>
+                        <strong>Project Deep Blue</strong>
+                        <p>Winning project media from Mastek Project Deep Blue Season 5.</p>
+                    </div>
+                </a>
+            </div>
+
+            <h2 id="research-interests">Research &amp; Projects</h2>
+            <ul class="compact-list">
+                <li>
+                    <strong>WiFiGPT &rarr; Locaris / WiFi telemetry localization</strong> (2025&ndash;Present). WiFiGPT first framed
+                    CSI, RSSI, and FTM telemetry as a sequence-modeling problem for decoder-only transformers; Locaris extends
+                    that line into a compact, telemetry-agnostic localization model. The Locaris arXiv preprint reports sub-meter
+                    accuracy with a few hundred samples, robustness under missing APs, and telemetry-agnostic support; the UC
+                    technology-transfer record lists the related WiFiGPT disclosure as Tech ID 34231 / UC Case 2026-577-0, part
+                    of the pending patent process.
+                    <span class="project-links">
+                        <a href="https://arxiv.org/abs/2505.15835">WiFiGPT arXiv</a> &middot;
+                        <a href="https://arxiv.org/abs/2510.11926">Locaris arXiv</a> &middot;
+                        <a href="https://www.linkedin.com/posts/nayan-bhatia_indoor-localization-using-compact-telemetry-agnostic-activity-7426308848866746369-R3nw">PerCom 2026 WiP announcement</a> &middot;
+                        <a href="https://techtransfer.universityofcalifornia.edu/NCD/34231.html">UC Tech Transfer</a>
+                    </span>
+                </li>
+                <li>
+                    <strong>Pulse-Fi</strong> (2024&ndash;Present). Low-cost, contactless WiFi CSI system for heart-rate monitoring,
+                    with extended work on breathing-rate and apnea monitoring. The peer-reviewed DCOSS-IoT paper reports
+                    heart-rate monitoring from low-cost WiFi devices; the extended arXiv version covers cardiopulmonary and
+                    apnea monitoring.
+                    <span class="project-links">
+                        <a href="https://doi.org/10.1109/DCOSS-IoT65416.2025.00037">IEEE DOI</a> &middot;
+                        <a href="https://news.ucsc.edu/wp-content/uploads/2025/08/Pulse_Fi_short_paper_iotdcoss.pdf">paper PDF</a> &middot;
+                        <a href="https://arxiv.org/abs/2510.24744">extended arXiv</a> &middot;
+                        <a href="https://news.ucsc.edu/2025/09/pulse-fi-wifi-heart-rate/">UCSC News</a> &middot;
+                        <a href="https://www.eurekalert.org/news-releases/1096757">EurekAlert</a> &middot;
+                        <a href="https://www.edge-ai-vision.com/2026/04/non-contact-vital-sign-monitoring-using-low-cost-wifi-devices-a-presentation-from-the-university-of-california-santa-cruz/">Edge AI presentation</a> &middot;
+                        <a href="https://docs.google.com/document/d/1apvCe6O2L4QO3WVgRJ57CXE6EA1hj0WyMKnEwKQhvoQ/edit?usp=sharing">press compilation</a>
+                    </span>
+                    <div class="media-row">
+                        <a href="https://www.eurekalert.org/multimedia/1089988">
+                            <img src="https://mediasvc.eurekalert.org/Api/v1/Multimedia/af31e376-b602-4900-a86b-53e140758099/Rendition/low-res/Content/Public" alt="Nayan Bhatia demonstrating Pulse-Fi">
+                            <span class="media-caption">Pulse-Fi demo image, Erika Cardema/UC Santa Cruz, via EurekAlert.</span>
+                        </a>
+                        <a href="https://news.ucsc.edu/2025/09/pulse-fi-wifi-heart-rate/">
+                            <img src="https://news.ucsc.edu/wp-content/uploads/2025/08/20250814-Pulse-Fi-Research-EC-07-scaled.jpg" alt="Katia Obraczka and Nayan Bhatia in the lab">
+                            <span class="media-caption">UCSC lab photo from the Pulse-Fi story.</span>
+                        </a>
+                    </div>
+                    The press log currently tracks 100+ public articles, videos, reposts, and discussions. Selected coverage:
+                    <a href="https://www.livescience.com/technology/communications/scientists-invent-pulse-fi-prototype-a-wi-fi-heart-rate-monitor-thats-cheaper-to-set-up-than-the-best-wearable-devices">Live Science</a>,
+                    <a href="https://www.cnet.com/health/medical/wi-fi-signals-can-measure-heart-rates-without-wearables-new-research-suggests/">CNET</a>,
+                    <a href="https://www.tomshardware.com/maker-stem/research-team-uses-wi-fi-to-monitor-heart-rate-accurately-relies-on-signal-variations-caused-by-beating-heart-to-determine-bpm">Tom's Hardware</a>,
+                    <a href="https://spectrum.ieee.org/wi-fi-signal-heartbeat-detection">IEEE Spectrum</a>,
+                    <a href="https://medicalxpress.com/news/2025-09-wifi-heart-wearables.html">Medical Xpress</a>,
+                    <a href="https://www.news-medical.net/news/20250902/Household-WiFi-devices-show-potential-for-nonintrusive-health-monitoring.aspx">News-Medical</a>,
+                    <a href="https://healthcare-in-europe.com/en/news/monitoring-heart-rate-wifi.html">Healthcare in Europe</a>,
+                    <a href="https://interestingengineering.com/health/wifi-heart-rate-monitoring-ucsc-pulsefi">Interesting Engineering</a>,
+                    <a href="https://www.hackster.io/news/i-heart-wi-fi-f3f726a38a1f">Hackster.io</a>,
+                    <a href="https://www.zdnet.com/article/with-raspberry-pi-and-wi-fi-researchers-built-a-wireless-heart-rate-monitor-heres-how/">ZDNet</a>,
+                    <a href="https://www.xda-developers.com/researchers-raspberry-pi-wi-fi-heart-rate-monitoring/">XDA Developers</a>,
+                    <a href="https://hackaday.com/2025/09/05/heart-rate-monitoring-via-wifi/">Hackaday</a>,
+                    <a href="https://www.ksbw.com/article/high-school-heart-rate-monitoring-uc-santa-cruz/69241438">KSBW TV</a>,
+                    and <a href="https://news.ycombinator.com/item?id=45127983">Hacker News discussion</a>.
+                </li>
+                <li>
+                    <strong><a href="https://ucbasicneeds.ucsc.edu">UC Essential Needs Directory</a> &amp;
+                    <a href="https://ucbasicneeds.ucsc.edu/ucen">Navigator</a></strong> (2021&ndash;Present). UC-wide resource
+                    directory and AI-powered Navigator for food, housing, health, transportation, legal, and financial-aid support.
+                    The Center for Economic Justice and Action describes the Navigator as a student-support search tool maintained by
+                    the UC Essential Needs Consortium, and UCSC News credits me with implementing the complete technical system.
+                    <span class="project-links">
+                        <a href="https://economicjustice.ucsc.edu/welcome-to-the-uc-enc-navigator/">CEJA Navigator page</a> &middot;
+                        <a href="https://news.ucsc.edu/2026/01/new-basic-needs-directory-provides-uc-students-with-one-stop-shop-for-resource-information/">UCSC launch story</a> &middot;
+                        <a href="https://www.universityofcalifornia.edu/press-room/university-california-sets-enrollment-records">UC enrollment record</a>
+                    </span>
+                </li>
+                <li>
+                    <strong><a href="https://inrg.engineering.ucsc.edu/project/nsb/">Network Simulation Bridge (NSB)</a></strong>.
+                    Open-source, platform-agnostic co-simulation tool connecting front-end applications to back-end network simulators
+                    such as OMNeT++ and ns-3. Published at ACM Q2SWinet 2023, presented as an IEEE ICDCS 2025 tutorial, and supported
+                    by NSF POSE Award 2449377.
+                    <span class="project-links">
+                        <a href="https://doi.org/10.1145/3616391.3622771">ACM DOI</a> &middot;
+                        <a href="https://github.com/nsb-ucsc/nsb">GitHub</a> &middot;
+                        <a href="https://icdcs2025.icdcs.org/tutorial-network-simulation-bridge-bridging-distributed-applications-with-network-simulators/">ICDCS tutorial</a> &middot;
+                        <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2449377">NSF award</a>
+                    </span>
+                </li>
+            </ul>
+
+            <h2 id="publications">Publications</h2>
+            <p>
+                DOI-backed papers and WiFi localization arXiv preprints are listed here with copyable BibTeX.
+            </p>
+            <div class="citation">
+                <strong>Pulse-Fi: A Low-Cost System for Accurate Heart Rate Monitoring Using Wi-Fi Channel State Information</strong>
+                <button type="button" data-copy-target="pulsefi-bibtex">Copy BibTeX</button>
+                <pre><code id="pulsefi-bibtex">@inproceedings{bhatia2025pulsefi,
+  title = {Pulse-Fi: A Low-Cost System for Accurate Heart Rate Monitoring Using Wi-Fi Channel State Information},
+  author = {Kocheta, Pranay and Bhatia, Nayan Sanjay and Obraczka, Katia},
+  booktitle = {2025 IEEE 21st International Conference on Distributed Computing in Smart Systems and the Internet of Things (DCOSS-IoT)},
+  pages = {226--230},
+  year = {2025},
+  doi = {10.1109/DCOSS-IoT65416.2025.00037}
+}</code></pre>
+            </div>
+            <div class="citation">
+                <strong>Network Simulation Bridge: Bridging Applications to Network Simulators</strong>
+                <button type="button" data-copy-target="nsb-bibtex">Copy BibTeX</button>
+                <pre><code id="nsb-bibtex">@inproceedings{kuttivelil2023network,
+  title = {Network Simulation Bridge: Bridging Applications to Network Simulators},
+  author = {Kuttivelil, Harikrishna S. and Sreenivasamurthy, Shesha and Krishnaswamy, Lakshmi and Bhatia, Nayan and Obraczka, Katia},
+  booktitle = {Proceedings of the 19th ACM International Symposium on QoS and Security for Wireless and Mobile Networks},
+  series = {Q2SWinet '23},
+  pages = {39--46},
+  year = {2023},
+  doi = {10.1145/3616391.3622771}
+}</code></pre>
+            </div>
+            <div class="citation">
+                <strong>Transforming Decoder-Only Transformers for Accurate WiFi-Telemetry Based Indoor Localization</strong>
+                <button type="button" data-copy-target="wifigpt-bibtex">Copy BibTeX</button>
+                <pre><code id="wifigpt-bibtex">@misc{bhatia2025wifigpt,
+  title = {Transforming Decoder-Only Transformers for Accurate WiFi-Telemetry Based Indoor Localization},
+  author = {Bhatia, Nayan Sanjay and Obraczka, Katia},
+  year = {2025},
+  eprint = {2505.15835},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.NI},
+  doi = {10.48550/arXiv.2505.15835},
+  url = {https://arxiv.org/abs/2505.15835}
+}</code></pre>
+            </div>
+            <div class="citation">
+                <strong>Indoor Localization using Compact, Telemetry-Agnostic, Transfer-Learning Enabled Decoder-Only Transformer</strong>
+                <button type="button" data-copy-target="locaris-bibtex">Copy BibTeX</button>
+                <pre><code id="locaris-bibtex">@misc{bhatia2025locaris,
+  title = {Indoor Localization using Compact, Telemetry-Agnostic, Transfer-Learning Enabled Decoder-Only Transformer},
+  author = {Bhatia, Nayan Sanjay and Kocheta, Pranay and Elliott, Russell and Kuttivelil, Harikrishna S. and Obraczka, Katia},
+  year = {2025},
+  eprint = {2510.11926},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.LG},
+  doi = {10.48550/arXiv.2510.11926},
+  url = {https://arxiv.org/abs/2510.11926}
+}</code></pre>
+            </div>
+
+            <h2 id="experience">Experience</h2>
+            <ul class="compact-list">
+                <li>
+                    <strong>ML/AI Intern, <a href="https://www.zscaler.com/">Zscaler</a></strong> (Summer 2026, incoming).
+                </li>
+                <li>
+                    <strong>LLM &amp; Platform Engineer, UC Santa Cruz</strong> (Oct 2021&ndash;Present).
+                    Built and deployed the UC Essential Needs Directory and Navigator; UCSC News describes the work as a complete
+                    technical system built with student, staff, and faculty partners.
+                    <a href="https://news.ucsc.edu/2026/01/new-basic-needs-directory-provides-uc-students-with-one-stop-shop-for-resource-information/">Source</a>.
+                </li>
+                <li>
+                    <strong>Graduate Researcher, i-NRG Lab</strong> (Sep 2021&ndash;Present).
+                    WiFi sensing, indoor localization, edge ML, and network co-simulation on commodity hardware.
+                </li>
+                <li>
+                    <strong>Teaching Assistant, UCSC</strong> (Jan 2022&ndash;Jun 2024).
+                    <a href="https://ucsc.smartcatalogiq.com/en/2019-2020/General-Catalog/Courses/ASTR-Astronomy-and-Astrophysics/100/ASTR-119">ASTR 119</a>,
+                    <a href="https://courses.soe.ucsc.edu/courses/cse157">CSE 157</a>,
+                    <a href="https://courses.soe.ucsc.edu/courses/cse130">CSE 130</a>,
+                    <a href="https://courses.soe.ucsc.edu/courses/cse13s">CSE 13S</a>,
+                    <a href="https://courses.soe.ucsc.edu/courses/cse30">CSE 30</a>,
+                    <a href="https://courses.soe.ucsc.edu/courses/cse20">CSE 20</a>.
+                </li>
+                <li>
+                    <strong>Web Developer / DevOps, <a href="https://casfs.ucsc.edu/">CASFS</a>, UCSC</strong> (Oct&ndash;Dec 2021).
+                    Built and scaled the UC Basic Needs site for all 10 UC campuses: CI/CD, SQL, REST endpoints,
+                    Google OAuth, VueJS, Gunicorn, and Nginx on CentOS.
+                </li>
+            </ul>
+
+            <h2 id="mentoring">Mentoring</h2>
+            <p>
+                I currently mentor <strong>Raksshana Harish Babu</strong> (undergraduate, UCSC) on WiFi sensing research.
+                Previously mentored <strong>Russell Elliott</strong> (M.S., UCSC), now a co-author on Locaris.
+            </p>
+            <p>
+                Since 2024 I have mentored high-school researchers through the UCSC
+                <a href="https://sip.ucsc.edu/">Science Internship Program (SIP)</a>. The Pulse-Fi public release notes that
+                Pranay Kocheta joined the project through SIP; subsequent cohorts have built WiFi sensing pipelines on commodity hardware.
+            </p>
+            <ul class="compact-list">
+                <li>
+                    <strong>SIP 2025 &mdash; CSE-07: Enhancing Wi-Fi Sensing Using Machine Learning Models with the 802.11 protocol.</strong>
+                    Mentor for Ruoyi (Gloria) Tang, William Boyd Nzive, Vir Choudhary, Yuhan (Amy) Li, and Dhriti Agarwal.
+                </li>
+                <li>
+                    <strong>SIP 2024 &mdash; CSE-15: Enhancing Indoor Localization Using Machine Learning Models with the 802.11 Protocol.</strong>
+                    Mentor for Pranay Kocheta, Axel Edin, Rafael Castro, and Ella Li.
+                </li>
+            </ul>
+
+            <h2 id="recognition">Awards, Service &amp; Recognition</h2>
+            <ul class="compact-list">
+                <li>
+                    <a href="https://qb3.ucsc.edu/fellows/2025/12/nayan-bhatia-qb3-fellows-2026/">QB3-UCSC Graduate Fellowship for Innovators</a>, 2026 (PulseFi).
+                </li>
+                <li>
+                    Biodiversity Seed Award ($2,500, 2021&ndash;22) and Agroecology Award ($3,000, 2022&ndash;23) &mdash; UC Basic Needs.
+                </li>
+                <li>
+                    UC Basic Needs honorarium ($5,000, 2023) and UC Essential Needs Directory &amp; Navigator fellowship ($7,500, 2025).
+                </li>
+                <li>
+                    CITRIS Smart Health Masterclass &amp; Intensive, UC Berkeley, 2025.
+                </li>
+                <li>
+                    Certificate of Recognition, UC Basic Needs &amp; Economic Justice Center, 2024 and 2025.
+                </li>
+                <li>
+                    TPC Member, <a href="https://www.ieeelcn.org/">IEEE LCN 2026</a>; Reviewer:
+                    <a href="https://www.computer.org/csdl/journal/tm">IEEE TMC</a> (2025),
+                    <a href="https://dl.acm.org/journal/tompecs">ACM TOMPECS</a> (2026).
+                </li>
+                <li>
+                    Invited talk: <a href="https://www.edge-ai-vision.com/2026/04/non-contact-vital-sign-monitoring-using-low-cost-wifi-devices-a-presentation-from-the-university-of-california-santa-cruz/">Edge AI and Vision Alliance</a>
+                    on non-contact vital-sign monitoring with low-cost WiFi devices.
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/nayan-bhatia/">Young Gladiators</a>,
+                    <a href="https://www.northeastern.edu/colosseum/">Colosseum</a> Master Class (DARPA/NSF).
+                </li>
+                <li>
+                    Project judge, <a href="https://cruzhacks.com/">CruzHacks 2026</a>.
+                </li>
             </ul>
 
             <h2 id="skills">Technical Skills</h2>
             <p>
-                <strong>Programming:</strong> Python, SQL, C/C++, Java, Solidity<br>
-                <strong>ML/AI:</strong> PyTorch, TensorFlow, scikit-learn, NumPy/Pandas<br>
-                <strong>Web:</strong> Node.js, React, Express, Django, Flask<br>
-                <strong>Infra:</strong> Docker, Kubernetes, CI/CD (GitHub Actions, Jenkins), AWS, GCP<br>
-                <strong>Specialties:</strong> WiFi sensing, edge AI, MLOps, wireless emulation
+                <strong>Programming:</strong> Python, SQL, C/C++, Java, Scala, Solidity<br>
+                <strong>ML/AI:</strong> PyTorch, TensorFlow, Keras, scikit-learn, NumPy/Pandas, Matplotlib<br>
+                <strong>Web:</strong> Node.js, React, Express, GraphQL, Flask, Django, HTML/CSS/JS<br>
+                <strong>Data/Infra:</strong> MySQL, MongoDB, CUDA, Docker, Kubernetes, Nginx, GitHub Actions, CI/CD, AWS, GCP<br>
+                <strong>MLOps/Automation:</strong> Jenkins, Ansible, Pytest, PyTorch Lightning, Selenium, SLURM
             </p>
 
-            <h2 id="recognition">Recognition & Leadership</h2>
-            <ul>
-                <li>CITRIS Smart Health Masterclass (2025) — AI in healthcare innovation</li>
-                <li>Young Gladiators NSF/DARPA Colosseum Training — large-scale wireless emulation</li>
-                <li>Biodiversity Seed & Agroecology Fellowship — $11K award for UC Basic Needs platform</li>
-                <li>SIP Mentor — guided interns on WiFi-based ML, reaching ~95% test accuracy</li>
+            <h2 id="earlier">Earlier &mdash; Hackathons, Competitions &amp; Leadership</h2>
+            <ul class="compact-list">
+                <li>
+                    <strong>Winner, <a href="https://deepblue.co.in/">Mastek Project Deep Blue</a> Season 5</strong>
+                    (2019&ndash;2020). Team leader.
+                    <a href="https://youtu.be/sQGIJt0KPOI">Winning video</a> &middot;
+                    <a href="https://youtu.be/3pCCZJbQK30">Project video</a>.
+                </li>
+                <li>
+                    <strong>Crop Yield Estimation (NDVI + OpenCV).</strong>
+                    Calculated plant health from drone imagery using the Normalized Difference Vegetation Index and OpenCV.
+                    <a href="https://www.youtube.com/@nayanbhatia2151">Video on my YouTube channel</a>.
+                </li>
+                <li>
+                    <strong>Winner, Smart India Hackathon 2019 (Software Edition).</strong>
+                    Backend developer on Team Random-6; built "Finding the Nearest Parking Lot in Vicinity."
+                    <div class="media-row">
+                        <img src="IMG-20190303-WA0059.jpg" alt="Nayan Bhatia holding Smart India Hackathon trophy and award">
+                    </div>
+                </li>
+                <li>
+                    <strong>1st prize (Societal Category), <a href="https://kjsieit.somaiya.edu.in/">KJSIEIT</a>-IIC IoT Idea Competition 2019</strong>
+                    for "Vehicular Ad-Hoc Network and IoT."
+                </li>
+                <li>
+                    <strong>Chairperson, IoT Cell, <a href="https://kjsieit.somaiya.edu.in/">KJSIEIT</a></strong> (2020&ndash;2021).
+                    Organized events and seminars attended by 100+ students.
+                </li>
+                <li>
+                    <strong>Teaching Instructor, Python &amp; ML</strong> &mdash;
+                    <a href="https://kjsieit.somaiya.edu.in/">KJSIEIT</a> &amp; Connect Club (2021).
+                </li>
             </ul>
 
             <h2 id="contact">Contact</h2>
@@ -85,6 +412,7 @@
                 <a href="https://www.linkedin.com/in/nayan-bhatia" class="mr-2"><i class="fab fa-linkedin"></i> LinkedIn</a>
                 <a href="https://github.com/nayanbhatia311" class="mr-2"><i class="fab fa-github"></i> GitHub</a>
                 <a href="https://scholar.google.com/citations?user=V7ODNwIAAAAJ&hl=en" class="mr-2"><i class="fas fa-book"></i> Google Scholar</a>
+                <a href="https://www.youtube.com/@nayanbhatia2151" class="mr-2"><i class="fab fa-youtube"></i> YouTube</a>
                 <a href="https://nayanbhatia.com"><i class="fas fa-globe"></i> Website</a>
             </div>
         </div>
@@ -98,6 +426,42 @@
             <a href="https://github.com/ojroques/hugo-researcher" title="Built with Hugo"><small>Built with Hugo</small></a>
         </div>
     </div>
+    <script>
+        document.querySelectorAll("[data-copy-target]").forEach(function (button) {
+            button.addEventListener("click", function () {
+                var target = document.getElementById(button.getAttribute("data-copy-target"));
+                if (!target) return;
+                var original = button.innerText;
+                var text = target.innerText;
+                function mark(label) {
+                    button.innerText = label;
+                    window.setTimeout(function () { button.innerText = original; }, 1400);
+                }
+                function selectText() {
+                    var range = document.createRange();
+                    range.selectNodeContents(target);
+                    var selection = window.getSelection();
+                    selection.removeAllRanges();
+                    selection.addRange(range);
+                }
+                function fallbackCopy() {
+                    selectText();
+                    try {
+                        mark(document.execCommand("copy") ? "Copied" : "Selected");
+                    } catch (error) {
+                        mark("Selected");
+                    }
+                }
+                if (navigator.clipboard && window.isSecureContext) {
+                    navigator.clipboard.writeText(text).then(function () {
+                        mark("Copied");
+                    }).catch(fallbackCopy);
+                } else {
+                    fallbackCopy();
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

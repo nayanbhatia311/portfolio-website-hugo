@@ -4,266 +4,150 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Network Simulation Bridge (NSB)</title>
+    <meta
+      name="description"
+      content="Network Simulation Bridge (NSB), an open-source co-simulation tool from UC Santa Cruz i-NRG for connecting applications to network simulators."
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@tailwindcss/typography@0.5.9/dist/typography.min.css"
     />
   </head>
-  <body class="min-h-screen bg-gradient-to-b from-slate-50 to-white">
-    <!-- Header -->
-    <header class="sticky top-0 z-30 backdrop-blur border-b bg-white/70">
-      <div class="mx-auto max-w-7xl px-4 py-4 flex items-center justify-between">
-        <div class="flex items-center gap-3">
-          <div class="w-8 h-8 bg-slate-200 rounded-full"></div>
-          <div>
-            <h1 class="text-xl md:text-2xl font-bold">
-              Network Simulation Bridge (NSB)
-            </h1>
-            <p class="text-xs md:text-sm text-slate-600">
-              Bridge real applications to network simulators
-            </p>
-          </div>
-        </div>
-        <div class="flex items-center gap-2">
-          <a
-            class="inline-flex items-center gap-2 rounded-xl border px-3 py-2 text-sm shadow-sm"
-            href="https://github.com/nsb-ucsc/nsb"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span>🔀</span> GitHub
+  <body class="min-h-screen bg-slate-50 text-slate-900">
+    <header class="border-b bg-white">
+      <div class="mx-auto max-w-5xl px-4 py-6 md:px-6">
+        <a href="index.html" class="text-sm text-slate-600 hover:text-slate-900">Nayan Bhatia</a>
+        <h1 class="mt-3 text-3xl font-bold tracking-tight md:text-4xl">
+          Network Simulation Bridge (NSB)
+        </h1>
+        <p class="mt-2 max-w-3xl text-slate-600">
+          Open-source, platform-agnostic co-simulation infrastructure for connecting
+          real or emulated applications to network simulation backends.
+        </p>
+        <div class="mt-4 flex flex-wrap gap-3 text-sm">
+          <a class="rounded border bg-white px-3 py-2 hover:bg-slate-100" href="https://github.com/nsb-ucsc/nsb">
+            GitHub
+          </a>
+          <a class="rounded border bg-white px-3 py-2 hover:bg-slate-100" href="https://inrg.engineering.ucsc.edu/project/nsb/">
+            i-NRG project page
+          </a>
+          <a class="rounded border bg-white px-3 py-2 hover:bg-slate-100" href="https://doi.org/10.1145/3616391.3622771">
+            ACM DOI
           </a>
         </div>
       </div>
     </header>
 
-    <!-- Layout -->
-    <main
-      class="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-[260px_1fr] gap-8 px-4 md:px-6 py-8"
-    >
-      <!-- Sidebar -->
-      <nav class="md:sticky md:top-24 h-max space-y-1 text-sm">
-        <a href="#overview" class="flex items-center gap-2 rounded-xl px-3 py-2 hover:bg-slate-100">
-          ▶ Overview
-        </a>
-        <a href="#quickstart" class="flex items-center gap-2 rounded-xl px-3 py-2 hover:bg-slate-100">
-          ▶ Quickstart
-        </a>
-        <a href="#install" class="flex items-center gap-2 rounded-xl px-3 py-2 hover:bg-slate-100">
-          ▶ Install
-        </a>
-        <a href="#concepts" class="flex items-center gap-2 rounded-xl px-3 py-2 hover:bg-slate-100">
-          ▶ Core Concepts
-        </a>
-        <a href="#examples" class="flex items-center gap-2 rounded-xl px-3 py-2 hover:bg-slate-100">
-          ▶ Examples
-        </a>
-        <a href="#api" class="flex items-center gap-2 rounded-xl px-3 py-2 hover:bg-slate-100">
-          ▶ API Surface (draft)
-        </a>
-        <a href="#sim-integrations" class="flex items-center gap-2 rounded-xl px-3 py-2 hover:bg-slate-100">
-          ▶ Simulator Integrations
-        </a>
-        <a href="#dev" class="flex items-center gap-2 rounded-xl px-3 py-2 hover:bg-slate-100">
-          ▶ Dev & Build
-        </a>
-        <a href="#license" class="flex items-center gap-2 rounded-xl px-3 py-2 hover:bg-slate-100">
-          ▶ License
-        </a>
-        <a href="#cite" class="flex items-center gap-2 rounded-xl px-3 py-2 hover:bg-slate-100">
-          ▶ How to Cite
-        </a>
-        <a href="#faq" class="flex items-center gap-2 rounded-xl px-3 py-2 hover:bg-slate-100">
-          ▶ FAQ
-        </a>
-      </nav>
+    <main class="mx-auto max-w-5xl px-4 py-8 md:px-6">
+      <div class="grid gap-8 md:grid-cols-[220px_1fr]">
+        <nav class="h-max space-y-1 text-sm md:sticky md:top-6">
+          <a href="#overview" class="block rounded px-3 py-2 hover:bg-white">Overview</a>
+          <a href="#evidence" class="block rounded px-3 py-2 hover:bg-white">Evidence</a>
+          <a href="#publication" class="block rounded px-3 py-2 hover:bg-white">Publication</a>
+          <a href="#tutorial" class="block rounded px-3 py-2 hover:bg-white">ICDCS Tutorial</a>
+          <a href="#funding" class="block rounded px-3 py-2 hover:bg-white">NSF Funding</a>
+          <a href="#license" class="block rounded px-3 py-2 hover:bg-white">License</a>
+        </nav>
 
-      <!-- Content -->
-      <div class="space-y-12">
-        <!-- Overview -->
-        <section id="overview" class="scroll-mt-28">
-          <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-3">
-            Overview
-          </h2>
-          <div class="prose prose-slate max-w-none">
+        <div class="prose prose-slate max-w-none">
+          <section id="overview" class="scroll-mt-8">
+            <h2>Overview</h2>
             <p>
-              <strong>NSB</strong> (Network Simulation Bridge) lets you connect
-              real or emulated applications to network simulators so you can
-              evaluate system behavior under controllable, repeatable network
-              conditions (e.g., latency, loss, bandwidth profiles) without
-              rewriting the app logic.
+              <strong>NSB</strong> lets researchers, developers, and students connect a front-end
+              program to a back-end network simulator. The public i-NRG project page describes
+              NSB as a core service for message management plus front-end and back-end APIs for
+              simulator integration.
             </p>
+            <p>
+              The project is designed to be open-source and agnostic to the front-end interface,
+              back-end simulator, and deployment environment. Current development focuses on
+              simulator support, including OMNeT++ and ns-3, along with protocol standardization,
+              performance optimization, and higher-level APIs.
+            </p>
+          </section>
 
-            <div class="grid md:grid-cols-3 gap-4 mt-6">
-              <div class="border rounded-2xl p-4 shadow-sm bg-white">
-                <div class="flex items-center gap-2 font-medium">
-                  ⚡ Drop-in bridging
-                </div>
-                <p class="mt-2 text-sm text-slate-600">
-                  Proxy real app traffic into simulations with minimal app
-                  changes.
-                </p>
-              </div>
-              <div class="border rounded-2xl p-4 shadow-sm bg-white">
-                <div class="flex items-center gap-2 font-medium">
-                  🔧 Deterministic tests
-                </div>
-                <p class="mt-2 text-sm text-slate-600">
-                  Script repeatable scenarios (mobility, link failures,
-                  congestion).
-                </p>
-              </div>
-              <div class="border rounded-2xl p-4 shadow-sm bg-white">
-                <div class="flex items-center gap-2 font-medium">
-                  📖 Research-ready
-                </div>
-                <p class="mt-2 text-sm text-slate-600">
-                  Designed for methodical experimentation and publishable
-                  results.
-                </p>
-              </div>
+          <section id="evidence" class="scroll-mt-8">
+            <h2>Direct Links</h2>
+            <div class="not-prose grid gap-4 md:grid-cols-2">
+              <a class="rounded border bg-white p-4 shadow-sm hover:bg-slate-50" href="https://inrg.engineering.ucsc.edu/project/nsb/">
+                <strong class="block">Project page</strong>
+                <span class="text-sm text-slate-600">i-NRG description, people, and publications.</span>
+              </a>
+              <a class="rounded border bg-white p-4 shadow-sm hover:bg-slate-50" href="https://github.com/nsb-ucsc/nsb">
+                <strong class="block">Repository</strong>
+                <span class="text-sm text-slate-600">Public NSB source repository.</span>
+              </a>
+              <a class="rounded border bg-white p-4 shadow-sm hover:bg-slate-50" href="https://doi.org/10.1145/3616391.3622771">
+                <strong class="block">ACM paper DOI</strong>
+                <span class="text-sm text-slate-600">Q2SWinet 2023 publication record.</span>
+              </a>
+              <a class="rounded border bg-white p-4 shadow-sm hover:bg-slate-50" href="https://icdcs2025.icdcs.org/tutorial-network-simulation-bridge-bridging-distributed-applications-with-network-simulators/">
+                <strong class="block">ICDCS 2025 tutorial</strong>
+                <span class="text-sm text-slate-600">Tutorial page listing Nayan Bhatia and collaborators.</span>
+              </a>
             </div>
+          </section>
 
-            <p class="mt-4 text-xs text-slate-500">
-              Docs are a developer-oriented draft based on the public repo; fill
-              in project-specific details as the API stabilizes.
+          <section id="publication" class="scroll-mt-8">
+            <h2>Publication</h2>
+            <p>
+              Harikrishna S. Kuttivelil, Shesha Sreenivasamurthy, Lakshmi Krishnaswamy,
+              Nayan Bhatia, and Katia Obraczka. 2023. <em>Network Simulation Bridge:
+              Bridging Applications to Network Simulators</em>. Proceedings of the 19th ACM
+              International Symposium on QoS and Security for Wireless and Mobile Networks
+              (Q2SWinet '23), 39-46.
             </p>
-          </div>
-        </section>
-
-        <!-- Quickstart -->
-        <section id="quickstart" class="scroll-mt-28">
-          <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-3">
-            Quickstart
-          </h2>
-          <div class="prose prose-slate max-w-none">
-            <p>Clone the repo and build the bridge and example components.</p>
-
-            <pre
-              class="border rounded-2xl p-4 overflow-x-auto text-sm bg-white"
-            ><code># 1) Clone
-git clone https://github.com/nsb-ucsc/nsb
-cd nsb
-
-# 2) (Optional) create a Python venv for any Python utilities
-python3 -m venv .venv && source .venv/bin/activate
-python -m pip install -U pip wheel
-
-# 3) Build native components (e.g., C++/Make)
-make -j$(sysctl -n hw.ncpu || nproc)
-
-# 4) Run a minimal smoke test
-./bin/nsb-bridge --help</code></pre>
-
-            <p class="mt-3 text-sm">
-              If you use a simulator (e.g., OMNeT++), install it first and
-              ensure its toolchain is in your <code>PATH</code>.
+            <p>
+              DOI: <a href="https://doi.org/10.1145/3616391.3622771">10.1145/3616391.3622771</a>
             </p>
-          </div>
-        </section>
+          </section>
 
-        <!-- Install -->
-        <section id="install" class="scroll-mt-28">
-          <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-3">
-            Install
-          </h2>
-          <div class="prose prose-slate max-w-none">
-            <h3 class="text-lg font-semibold">Prerequisites</h3>
-            <ul>
-              <li>
-                Build toolchain: recent C++ compiler, <code>make</code> or
-                <code>cmake</code>.
-              </li>
-              <li>Python 3.10+ for helper scripts.</li>
-              <li>
-                (Optional) Supported simulator. <em>See “Simulator
-                Integrations”.</em>
-              </li>
-            </ul>
-            <h3 class="text-lg font-semibold mt-4">From source</h3>
-            <pre
-              class="border rounded-2xl p-4 overflow-x-auto text-sm bg-white"
-            ><code>git clone https://github.com/nsb-ucsc/nsb
-cd nsb
-make           # or cmake -S . -B build && cmake --build build</code></pre>
-          </div>
-        </section>
+          <section id="tutorial" class="scroll-mt-8">
+            <h2>IEEE ICDCS 2025 Tutorial</h2>
+            <p>
+              The ICDCS 2025 tutorial page describes NSB as an open-source and platform-agnostic
+              network co-simulation tool for integrating network simulations into distributed
+              applications and systems. The tutorial covered NSB design, implementation, and usage
+              with OMNeT++ and ns-3.
+            </p>
+            <p>
+              Tutorial:
+              <a href="https://icdcs2025.icdcs.org/tutorial-network-simulation-bridge-bridging-distributed-applications-with-network-simulators/">
+                Network Simulation Bridge: Bridging Distributed Applications with Network Simulators
+              </a>
+            </p>
+          </section>
 
-        <!-- Core Concepts -->
-        <section id="concepts" class="scroll-mt-28">
-          <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-3">
-            Core Concepts
-          </h2>
-          <ul>
-            <li><strong>Bridge Node:</strong> connects app endpoint to simulated network.</li>
-            <li><strong>Adapters:</strong> modules translating I/O to events.</li>
-            <li><strong>Scenario:</strong> describes links, mobility, failures.</li>
-            <li><strong>Determinism:</strong> reproducible runs with fixed seeds.</li>
-          </ul>
-        </section>
+          <section id="funding" class="scroll-mt-8">
+            <h2>NSF Funding</h2>
+            <p>
+              NSB is supported by NSF POSE Award 2449377,
+              <em>Open-Sourcing the Network Simulation Bridge for Networked Applications Development</em>.
+              The award supports building an open-source ecosystem around NSB for realistic,
+              reproducible testing of distributed applications.
+            </p>
+            <p>
+              Award record:
+              <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2449377">
+                NSF Award 2449377
+              </a>
+            </p>
+          </section>
 
-        <!-- Examples -->
-        <section id="examples" class="scroll-mt-28">
-          <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-3">
-            Examples
-          </h2>
-          <p>Below are stubbed examples you can adapt.</p>
-
-          <h3 class="text-lg font-semibold mt-3">Run an echo server</h3>
-          <pre
-            class="border rounded-2xl p-4 overflow-x-auto text-sm bg-white"
-          ><code># Terminal A
-echo '{"links":[{"src":"app","dst":"net","latency_ms":40,"loss":0.01}]}' > scenario.json
-./bin/nsb-bridge --scenario scenario.json --listen 127.0.0.1:9000
-
-# Terminal B
-APP_ENDPOINT=127.0.0.1:9000 ./your_app --server
-
-# Terminal C
-echo "ping" | nc 127.0.0.1 9000</code></pre>
-        </section>
-
-        <!-- License -->
-        <section id="license" class="scroll-mt-28">
-          <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-3">
-            License
-          </h2>
-          <p>
-            Repository uses the <em>UC Santa Cruz Noncommercial License</em>.
-            Commercial use requires coordination with UCSC Innovation Transfer.
-          </p>
-          <ul class="text-sm">
-            <li>Noncommercial research use allowed.</li>
-            <li>
-              For commercial use, contact
-              <a
-                href="mailto:innovation@ucsc.edu"
-                class="underline text-blue-600"
-                >innovation@ucsc.edu</a
-              >.
-            </li>
-          </ul>
-        </section>
-
-        <!-- Footer -->
-        <footer class="pt-8 border-t text-sm text-slate-500">
-          <p class="mb-2">
-            © Regents of the University of California. NSB is an academic
-            project from UC Santa Cruz.
-          </p>
-          <p class="flex items-center gap-2">
-            🔗
-            <a
-              href="https://github.com/nsb-ucsc/nsb"
-              target="_blank"
-              rel="noreferrer"
-              >github.com/nsb-ucsc/nsb</a
-            >
-          </p>
-        </footer>
+          <section id="license" class="scroll-mt-8">
+            <h2>License</h2>
+            <p>
+              The repository identifies the project as using the UC Santa Cruz Noncommercial License.
+              For commercial use, coordinate with UC Santa Cruz Industry Alliances &amp; Technology
+              Commercialization.
+            </p>
+            <p>
+              Contact: <a href="mailto:innovation@ucsc.edu">innovation@ucsc.edu</a>
+            </p>
+          </section>
+        </div>
       </div>
     </main>
   </body>
 </html>
-
