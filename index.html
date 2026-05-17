@@ -49,10 +49,6 @@
         .media-caption { display: block; color: #666; font-size: 0.85rem; margin-top: 0.25rem; max-width: 250px; }
         .feature-image { margin: 0.75rem 0; }
         #content .feature-image img { border-radius: 6px; max-height: 260px; object-fit: contain; margin: 0; background: #f8f8f8; }
-        .citation { border: 1px solid #e5e5e5; border-radius: 6px; padding: 0.75rem; margin: 0.75rem 0; background: #fff; }
-        .citation strong { display: block; margin-bottom: 0.35rem; }
-        .citation button { border: 1px solid #ccc; border-radius: 4px; background: #f8f8f8; padding: 0.15rem 0.45rem; margin-bottom: 0.5rem; cursor: pointer; }
-        #content .citation pre { white-space: pre-wrap; word-break: break-word; margin: 0; background: #f8f8f8; border: 1px solid #eee; border-radius: 4px; padding: 0.5rem; }
         .compact-list li { margin-bottom: 0.55rem; }
         .navbar-nav { gap: 0.75rem; }
         @media (max-width: 575.98px) {
@@ -91,10 +87,10 @@
                 to contactless vital-sign monitoring.
             </p>
             <p>
-                I develop and maintain the University of California's Essential Needs web app ecosystem, including the
+                I maintain the University of California's Essential Needs web app ecosystem, including the
                 <a href="https://ucbasicneeds.ucsc.edu">UC Essential Needs Directory</a> and
-                <a href="https://ucbasicneeds.ucsc.edu/ucen">UC Essential Needs Navigator</a>. UC Santa Cruz News reports that I
-                developed the directory and AI-powered Navigator and implemented the complete technical system with campus partners.
+                <a href="https://ucbasicneeds.ucsc.edu/ucen">UC Essential Needs Navigator</a>. I built the directory and
+                AI-powered Navigator with campus partners, from backend services to deployment.
                 The platform serves a UC system that enrolled <a href="https://www.universityofcalifornia.edu/press-room/university-california-sets-enrollment-records">301,093 students in fall 2025</a>.
             </p>
 
@@ -176,7 +172,7 @@
                             <span class="media-caption">UCSC lab photo from the Pulse-Fi story.</span>
                         </a>
                     </div>
-                    The press log currently tracks 100+ public articles, videos, reposts, and discussions. Selected coverage:
+                    Pulse-Fi coverage spans 100+ public articles, videos, reposts, and discussions, including:
                     <a href="https://www.livescience.com/technology/communications/scientists-invent-pulse-fi-prototype-a-wi-fi-heart-rate-monitor-thats-cheaper-to-set-up-than-the-best-wearable-devices">Live Science</a>,
                     <a href="https://www.cnet.com/health/medical/wi-fi-signals-can-measure-heart-rates-without-wearables-new-research-suggests/">CNET</a>,
                     <a href="https://www.tomshardware.com/maker-stem/research-team-uses-wi-fi-to-monitor-heart-rate-accurately-relies-on-signal-variations-caused-by-beating-heart-to-determine-bpm">Tom's Hardware</a>,
@@ -196,8 +192,7 @@
                     <strong><a href="https://ucbasicneeds.ucsc.edu">UC Essential Needs Directory</a> &amp;
                     <a href="https://ucbasicneeds.ucsc.edu/ucen">Navigator</a></strong> (2021&ndash;Present). UC-wide resource
                     directory and AI-powered Navigator for food, housing, health, transportation, legal, and financial-aid support.
-                    The Center for Economic Justice and Action describes the Navigator as a student-support search tool maintained by
-                    the UC Essential Needs Consortium, and UCSC News credits me with implementing the complete technical system.
+                    Built with the UC Essential Needs Consortium, CEJA, and UCSC campus partners.
                     <span class="project-links">
                         <a href="https://economicjustice.ucsc.edu/welcome-to-the-uc-enc-navigator/">CEJA Navigator page</a> &middot;
                         <a href="https://news.ucsc.edu/2026/01/new-basic-needs-directory-provides-uc-students-with-one-stop-shop-for-resource-information/">UCSC launch story</a> &middot;
@@ -218,64 +213,6 @@
                 </li>
             </ul>
 
-            <h2 id="publications">Publications</h2>
-            <p>
-                DOI-backed papers and WiFi localization arXiv preprints are listed here with copyable BibTeX.
-            </p>
-            <div class="citation">
-                <strong>Pulse-Fi: A Low-Cost System for Accurate Heart Rate Monitoring Using Wi-Fi Channel State Information</strong>
-                <button type="button" data-copy-target="pulsefi-bibtex">Copy BibTeX</button>
-                <pre><code id="pulsefi-bibtex">@inproceedings{bhatia2025pulsefi,
-  title = {Pulse-Fi: A Low-Cost System for Accurate Heart Rate Monitoring Using Wi-Fi Channel State Information},
-  author = {Kocheta, Pranay and Bhatia, Nayan Sanjay and Obraczka, Katia},
-  booktitle = {2025 IEEE 21st International Conference on Distributed Computing in Smart Systems and the Internet of Things (DCOSS-IoT)},
-  pages = {226--230},
-  year = {2025},
-  doi = {10.1109/DCOSS-IoT65416.2025.00037}
-}</code></pre>
-            </div>
-            <div class="citation">
-                <strong>Network Simulation Bridge: Bridging Applications to Network Simulators</strong>
-                <button type="button" data-copy-target="nsb-bibtex">Copy BibTeX</button>
-                <pre><code id="nsb-bibtex">@inproceedings{kuttivelil2023network,
-  title = {Network Simulation Bridge: Bridging Applications to Network Simulators},
-  author = {Kuttivelil, Harikrishna S. and Sreenivasamurthy, Shesha and Krishnaswamy, Lakshmi and Bhatia, Nayan and Obraczka, Katia},
-  booktitle = {Proceedings of the 19th ACM International Symposium on QoS and Security for Wireless and Mobile Networks},
-  series = {Q2SWinet '23},
-  pages = {39--46},
-  year = {2023},
-  doi = {10.1145/3616391.3622771}
-}</code></pre>
-            </div>
-            <div class="citation">
-                <strong>Transforming Decoder-Only Transformers for Accurate WiFi-Telemetry Based Indoor Localization</strong>
-                <button type="button" data-copy-target="wifigpt-bibtex">Copy BibTeX</button>
-                <pre><code id="wifigpt-bibtex">@misc{bhatia2025wifigpt,
-  title = {Transforming Decoder-Only Transformers for Accurate WiFi-Telemetry Based Indoor Localization},
-  author = {Bhatia, Nayan Sanjay and Obraczka, Katia},
-  year = {2025},
-  eprint = {2505.15835},
-  archivePrefix = {arXiv},
-  primaryClass = {cs.NI},
-  doi = {10.48550/arXiv.2505.15835},
-  url = {https://arxiv.org/abs/2505.15835}
-}</code></pre>
-            </div>
-            <div class="citation">
-                <strong>Indoor Localization using Compact, Telemetry-Agnostic, Transfer-Learning Enabled Decoder-Only Transformer</strong>
-                <button type="button" data-copy-target="locaris-bibtex">Copy BibTeX</button>
-                <pre><code id="locaris-bibtex">@misc{bhatia2025locaris,
-  title = {Indoor Localization using Compact, Telemetry-Agnostic, Transfer-Learning Enabled Decoder-Only Transformer},
-  author = {Bhatia, Nayan Sanjay and Kocheta, Pranay and Elliott, Russell and Kuttivelil, Harikrishna S. and Obraczka, Katia},
-  year = {2025},
-  eprint = {2510.11926},
-  archivePrefix = {arXiv},
-  primaryClass = {cs.LG},
-  doi = {10.48550/arXiv.2510.11926},
-  url = {https://arxiv.org/abs/2510.11926}
-}</code></pre>
-            </div>
-
             <h2 id="experience">Experience</h2>
             <ul class="compact-list">
                 <li>
@@ -283,9 +220,8 @@
                 </li>
                 <li>
                     <strong>LLM &amp; Platform Engineer, UC Santa Cruz</strong> (Oct 2021&ndash;Present).
-                    Built and deployed the UC Essential Needs Directory and Navigator; UCSC News describes the work as a complete
-                    technical system built with student, staff, and faculty partners.
-                    <a href="https://news.ucsc.edu/2026/01/new-basic-needs-directory-provides-uc-students-with-one-stop-shop-for-resource-information/">Source</a>.
+                    Built and deployed the UC Essential Needs Directory and Navigator with student, staff, and faculty partners.
+                    <a href="https://news.ucsc.edu/2026/01/new-basic-needs-directory-provides-uc-students-with-one-stop-shop-for-resource-information/">UCSC launch story</a>.
                 </li>
                 <li>
                     <strong>Graduate Researcher, i-NRG Lab</strong> (Sep 2021&ndash;Present).
@@ -300,11 +236,6 @@
                     <a href="https://courses.soe.ucsc.edu/courses/cse30">CSE 30</a>,
                     <a href="https://courses.soe.ucsc.edu/courses/cse20">CSE 20</a>.
                 </li>
-                <li>
-                    <strong>Web Developer / DevOps, <a href="https://casfs.ucsc.edu/">CASFS</a>, UCSC</strong> (Oct&ndash;Dec 2021).
-                    Built and scaled the UC Basic Needs site for all 10 UC campuses: CI/CD, SQL, REST endpoints,
-                    Google OAuth, VueJS, Gunicorn, and Nginx on CentOS.
-                </li>
             </ul>
 
             <h2 id="mentoring">Mentoring</h2>
@@ -314,8 +245,7 @@
             </p>
             <p>
                 Since 2024 I have mentored high-school researchers through the UCSC
-                <a href="https://sip.ucsc.edu/">Science Internship Program (SIP)</a>. The Pulse-Fi public release notes that
-                Pranay Kocheta joined the project through SIP; subsequent cohorts have built WiFi sensing pipelines on commodity hardware.
+                <a href="https://sip.ucsc.edu/">Science Internship Program (SIP)</a>.
             </p>
             <ul class="compact-list">
                 <li>
@@ -423,45 +353,12 @@
             <a href="mailto:nbhatia3@ucsc.edu" class="fas fa-envelope fa-1x" title="E-mail"></a>
         </div>
         <div class="container text-center">
-            <a href="https://github.com/ojroques/hugo-researcher" title="Built with Hugo"><small>Built with Hugo</small></a>
+            <small>
+                Built with <a href="https://github.com/ojroques/hugo-researcher" title="Built with Hugo">Hugo</a> &middot;
+                Website polish with GPT-5.5
+            </small>
         </div>
     </div>
-    <script>
-        document.querySelectorAll("[data-copy-target]").forEach(function (button) {
-            button.addEventListener("click", function () {
-                var target = document.getElementById(button.getAttribute("data-copy-target"));
-                if (!target) return;
-                var original = button.innerText;
-                var text = target.innerText;
-                function mark(label) {
-                    button.innerText = label;
-                    window.setTimeout(function () { button.innerText = original; }, 1400);
-                }
-                function selectText() {
-                    var range = document.createRange();
-                    range.selectNodeContents(target);
-                    var selection = window.getSelection();
-                    selection.removeAllRanges();
-                    selection.addRange(range);
-                }
-                function fallbackCopy() {
-                    selectText();
-                    try {
-                        mark(document.execCommand("copy") ? "Copied" : "Selected");
-                    } catch (error) {
-                        mark("Selected");
-                    }
-                }
-                if (navigator.clipboard && window.isSecureContext) {
-                    navigator.clipboard.writeText(text).then(function () {
-                        mark("Copied");
-                    }).catch(fallbackCopy);
-                } else {
-                    fallbackCopy();
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>
