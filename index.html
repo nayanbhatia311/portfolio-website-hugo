@@ -30,7 +30,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="sass/researcher.min.css">
+    <link rel="stylesheet" href="sass/researcher.min.css?v=blue-accent">
     <style>
         .lede { font-size: 1.08rem; }
         .proof-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1rem; margin: 1rem 0 1.5rem; }
@@ -46,7 +46,17 @@
         .media-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 0.75rem 0; }
         .media-row a { display: inline-block; }
         #content .media-row img { height: 140px; width: auto; max-width: 100%; border-radius: 6px; object-fit: cover; margin: 0; }
-        .media-caption { display: block; color: #666; font-size: 0.85rem; margin-top: 0.25rem; max-width: 250px; }
+        #content .media-row a .media-caption { display: block; color: #666; font-size: 0.85rem; line-height: 1.25; margin-top: 0.35rem; max-width: 250px; }
+        .pulse-media { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.85rem; max-width: 100%; }
+        #content .pulse-media a { display: block; }
+        #content .pulse-media img { width: 100%; height: 220px; object-fit: cover; object-position: center; }
+        #content .pulse-media .media-caption { max-width: none; }
+        .sih-media { display: block; max-width: 340px; }
+        #content .sih-media img { width: 100%; height: auto; max-height: 520px; object-fit: contain; background: #f8f8f8; }
+        #content .sih-media .media-caption { max-width: none; color: #666; }
+        .ucbn-media { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.85rem; max-width: 100%; }
+        #content .ucbn-media img { width: 100%; height: 190px; object-fit: cover; object-position: center; }
+        #content .ucbn-media .media-caption { max-width: none; color: #666; }
         .feature-image { margin: 0.75rem 0; }
         #content .feature-image img { border-radius: 6px; max-height: 260px; object-fit: contain; margin: 0; background: #f8f8f8; }
         .compact-list li { margin-bottom: 0.55rem; }
@@ -55,6 +65,8 @@
             #content .avatar>img { float: none; margin: 0 auto 1rem; height: 140px; width: 140px; }
             .navbar-nav { gap: 1rem; }
             .proof-grid { grid-template-columns: 1fr; }
+            .pulse-media { grid-template-columns: 1fr; }
+            .ucbn-media { grid-template-columns: 1fr; }
             #content .feature-image img { max-height: none; width: 100%; }
         }
     </style>
@@ -139,8 +151,8 @@
                     CSI, RSSI, and FTM telemetry as a sequence-modeling problem for decoder-only transformers; Locaris extends
                     that line into a compact, telemetry-agnostic localization model. The Locaris arXiv preprint reports sub-meter
                     accuracy with a few hundred samples, robustness under missing APs, and telemetry-agnostic support; the UC
-                    technology-transfer record lists the related WiFiGPT disclosure as Tech ID 34231 / UC Case 2026-577-0, part
-                    of the pending patent process.
+                    technology-transfer record lists the related WiFiGPT disclosure as Tech ID 34231 / UC Case 2026-577-0;
+                    a Locaris provisional patent has been filed.
                     <span class="project-links">
                         <a href="https://arxiv.org/abs/2505.15835">WiFiGPT arXiv</a> &middot;
                         <a href="https://arxiv.org/abs/2510.11926">Locaris arXiv</a> &middot;
@@ -152,7 +164,7 @@
                     <strong>Pulse-Fi</strong> (2024&ndash;Present). Low-cost, contactless WiFi CSI system for heart-rate monitoring,
                     with extended work on breathing-rate and apnea monitoring. The peer-reviewed DCOSS-IoT paper reports
                     heart-rate monitoring from low-cost WiFi devices; the extended arXiv version covers cardiopulmonary and
-                    apnea monitoring.
+                    apnea monitoring. A Pulse-Fi utility provisional patent application has been filed under 35 USC 111(b).
                     <span class="project-links">
                         <a href="https://doi.org/10.1109/DCOSS-IoT65416.2025.00037">IEEE DOI</a> &middot;
                         <a href="https://news.ucsc.edu/wp-content/uploads/2025/08/Pulse_Fi_short_paper_iotdcoss.pdf">paper PDF</a> &middot;
@@ -162,10 +174,10 @@
                         <a href="https://www.edge-ai-vision.com/2026/04/non-contact-vital-sign-monitoring-using-low-cost-wifi-devices-a-presentation-from-the-university-of-california-santa-cruz/">Edge AI presentation</a> &middot;
                         <a href="https://docs.google.com/document/d/1apvCe6O2L4QO3WVgRJ57CXE6EA1hj0WyMKnEwKQhvoQ/edit?usp=sharing">press compilation</a>
                     </span>
-                    <div class="media-row">
-                        <a href="https://www.eurekalert.org/multimedia/1089988">
-                            <img src="https://mediasvc.eurekalert.org/Api/v1/Multimedia/af31e376-b602-4900-a86b-53e140758099/Rendition/low-res/Content/Public" alt="Nayan Bhatia demonstrating Pulse-Fi">
-                            <span class="media-caption">Pulse-Fi demo image, Erika Cardema/UC Santa Cruz, via EurekAlert.</span>
+                    <div class="media-row pulse-media">
+                        <a href="https://news.ucsc.edu/2025/09/pulse-fi-wifi-heart-rate/">
+                            <img src="https://news.ucsc.edu/wp-content/uploads/2025/08/20250814-Pulse-Fi-Research-EC-08-scaled-e1756416372585.jpg" alt="Pulse-Fi demo with WiFi hardware and heart-rate signal">
+                            <span class="media-caption">Pulse-Fi demo with WiFi hardware and live signal trace.</span>
                         </a>
                         <a href="https://news.ucsc.edu/2025/09/pulse-fi-wifi-heart-rate/">
                             <img src="https://news.ucsc.edu/wp-content/uploads/2025/08/20250814-Pulse-Fi-Research-EC-07-scaled.jpg" alt="Katia Obraczka and Nayan Bhatia in the lab">
@@ -241,7 +253,8 @@
             <h2 id="mentoring">Mentoring</h2>
             <p>
                 I currently mentor <strong>Raksshana Harish Babu</strong> (undergraduate, UCSC) on WiFi sensing research.
-                Previously mentored <strong>Russell Elliott</strong> (M.S., UCSC), now a co-author on Locaris.
+                I also mentor <strong>Makela Shen</strong> (Saratoga High School). Previously mentored
+                <strong>Russell Elliott</strong> (M.S., UCSC), now a co-author on Locaris.
             </p>
             <p>
                 Since 2024 I have mentored high-school researchers through the UCSC
@@ -251,10 +264,13 @@
                 <li>
                     <strong>SIP 2025 &mdash; CSE-07: Enhancing Wi-Fi Sensing Using Machine Learning Models with the 802.11 protocol.</strong>
                     Mentor for Ruoyi (Gloria) Tang, William Boyd Nzive, Vir Choudhary, Yuhan (Amy) Li, and Dhriti Agarwal.
+                    <a href="https://docs.google.com/presentation/d/1lrvcXieQ_uYgXQha6kxhwcUhWhwyA1Fde8hxpQr_GmA/edit?usp=sharing">Slides</a>.
                 </li>
                 <li>
                     <strong>SIP 2024 &mdash; CSE-15: Enhancing Indoor Localization Using Machine Learning Models with the 802.11 Protocol.</strong>
                     Mentor for Pranay Kocheta, Axel Edin, Rafael Castro, and Ella Li.
+                    <a href="https://docs.google.com/presentation/d/1td6k3D4xJaq0B9XzkwB58UjQIgdOg1pPQesSkOtq24Y/edit?usp=sharing">Slides</a> &middot;
+                    <a href="https://youtu.be/WMstv0ph-Z8?si=JQ7scVhbUvW3ZZzC">Project video</a>.
                 </li>
             </ul>
 
@@ -276,6 +292,21 @@
                     Certificate of Recognition, UC Basic Needs &amp; Economic Justice Center, 2024 and 2025.
                 </li>
                 <li>
+                    Invited presenter, UC Basic Needs convenings (2022&ndash;2026): CHEBNA 2024/2026,
+                    <a href="https://www.linkedin.com/posts/nayan-bhatia_im-grateful-to-have-had-the-opportunity-ugcPost-7261638187465203713-x2Kn?utm_source=social_share_send&amp;utm_medium=member_desktop_web&amp;rcm=ACoAACzAeWUBafYUjFFwhSZ8aEHpLalXhnnh2QQ">UC GPC Summit</a>
+                    (UCLA), and UC Basic Needs Convening (UC Irvine).
+                    <div class="media-row ucbn-media">
+                        <a href="1678237571046.jpeg">
+                            <img src="1678237571046.jpeg" alt="Nayan Bhatia presenting UC Basic Needs web application workshop at UC Irvine">
+                            <span class="media-caption">UC Basic Needs web application workshop at UC Irvine.</span>
+                        </a>
+                        <a href="1678237577475.jpeg">
+                            <img src="1678237577475.jpeg" alt="UC Basic Needs web application workshop team at UC Irvine">
+                            <span class="media-caption">UC Basic Needs workshop team media at UC Irvine.</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
                     TPC Member, <a href="https://www.ieeelcn.org/">IEEE LCN 2026</a>; Reviewer:
                     <a href="https://www.computer.org/csdl/journal/tm">IEEE TMC</a> (2025),
                     <a href="https://dl.acm.org/journal/tompecs">ACM TOMPECS</a> (2026).
@@ -285,8 +316,9 @@
                     on non-contact vital-sign monitoring with low-cost WiFi devices.
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/nayan-bhatia/">Young Gladiators</a>,
-                    <a href="https://www.northeastern.edu/colosseum/">Colosseum</a> Master Class (DARPA/NSF).
+                    Young Gladiators / Colosseum Master Class (DARPA/NSF):
+                    <a href="https://www.linkedin.com/posts/nayan-bhatia_hello-everyone-i-recently-participated-ugcPost-7207842404874297344-K-zy?utm_source=social_share_send&amp;utm_medium=member_desktop_web&amp;rcm=ACoAACzAeWUBafYUjFFwhSZ8aEHpLalXhnnh2QQ">LinkedIn post</a> &middot;
+                    <a href="https://colosseum.sites.northeastern.edu/colosseum-young-gladiators-2022/">program page</a>.
                 </li>
                 <li>
                     Project judge, <a href="https://cruzhacks.com/">CruzHacks 2026</a>.
@@ -318,21 +350,22 @@
                 <li>
                     <strong>Winner, Smart India Hackathon 2019 (Software Edition).</strong>
                     Backend developer on Team Random-6; built "Finding the Nearest Parking Lot in Vicinity."
-                    <div class="media-row">
+                    <div class="media-row sih-media">
                         <img src="IMG-20190303-WA0059.jpg" alt="Nayan Bhatia holding Smart India Hackathon trophy and award">
+                        <span class="media-caption">Smart India Hackathon 2019 award media.</span>
                     </div>
                 </li>
                 <li>
-                    <strong>1st prize (Societal Category), <a href="https://kjsieit.somaiya.edu.in/">KJSIEIT</a>-IIC IoT Idea Competition 2019</strong>
+                    <strong>1st prize (Societal Category), KJSIEIT-IIC IoT Idea Competition 2019</strong>
                     for "Vehicular Ad-Hoc Network and IoT."
                 </li>
                 <li>
-                    <strong>Chairperson, IoT Cell, <a href="https://kjsieit.somaiya.edu.in/">KJSIEIT</a></strong> (2020&ndash;2021).
+                    <strong>Chairperson, IoT Cell, KJSIEIT</strong> (2020&ndash;2021).
                     Organized events and seminars attended by 100+ students.
                 </li>
                 <li>
                     <strong>Teaching Instructor, Python &amp; ML</strong> &mdash;
-                    <a href="https://kjsieit.somaiya.edu.in/">KJSIEIT</a> &amp; Connect Club (2021).
+                    KJSIEIT &amp; Connect Club (2021).
                 </li>
             </ul>
 
