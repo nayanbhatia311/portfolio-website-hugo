@@ -43,6 +43,9 @@
         .proof-card p { margin: 0; font-size: 0.92rem; line-height: 1.35; }
         .project-links { display: inline; }
         .project-links a { white-space: nowrap; }
+        .project-detail { display: block; margin-top: 0.25rem; }
+        .project-detail > span { display: block; margin-top: 0.18rem; }
+        .project-detail .project-links { display: block; }
         .media-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 0.75rem 0; }
         .media-row a { display: inline-block; }
         #content .media-row img { height: 140px; width: auto; max-width: 100%; border-radius: 6px; object-fit: cover; margin: 0; }
@@ -67,9 +70,13 @@
         #content .skills-list { list-style: none; padding-left: 0; margin-bottom: 1rem; }
         #content .skills-list > li { line-height: 1.35; margin: 0 0 0.25rem 0; padding-left: 0; }
         #content .skills-list strong { display: inline-block; min-width: 8.4rem; }
+        #content .avatar { float: right; margin: -8px 0 0 16px; text-align: center; width: 150px; }
+        #content .avatar>img { float: none; margin: 0; }
+        .avatar-credit { color: #666; display: block; font-size: 0.78rem; line-height: 1.2; margin-top: 0.35rem; }
         .navbar-nav { gap: 0.75rem; }
         @media (max-width: 575.98px) {
-            #content .avatar>img { float: none; margin: 0 auto 1rem; height: 140px; width: 140px; }
+            #content .avatar { float: none; margin: 0 auto 1rem; width: 140px; }
+            #content .avatar>img { height: 140px; width: 140px; }
             .navbar-nav { gap: 1rem; }
             .proof-grid { grid-template-columns: 1fr; }
             .pulse-media { grid-template-columns: 1fr; }
@@ -86,6 +93,7 @@
                 Nayan Bhatia
             </a>
             <div class="navbar-nav flex-row flex-wrap justify-content-center">
+                <a class="nav-item nav-link" href="https://www.linkedin.com/in/nayan-bhatia" title="LinkedIn">LinkedIn</a>
                 <a class="nav-item nav-link" href="https://scholar.google.com/citations?user=V7ODNwIAAAAJ&hl=en" title="Google Scholar">Google Scholar</a>
                 <a class="nav-item nav-link" href="pdfs/NayanBhatia_PhD_CSE_UCSC_June2027.pdf" title="Resume">Resume</a>
             </div>
@@ -97,6 +105,9 @@
             <h2 id="about-me">About Me</h2>
             <figure class="avatar">
                 <img src="bhatia.png" alt="Nayan Bhatia" class="img-fluid rounded-circle">
+                <figcaption class="avatar-credit">
+                    Illustration by <a href="https://www.instagram.com/thegraphicgirl13/">Juhi Gori</a>.
+                </figcaption>
             </figure>
             <p class="lede">
                 I am a Computer Science &amp; Engineering PhD candidate at UC Santa Cruz, advised by
@@ -161,32 +172,35 @@
             <h2 id="research-interests">Research &amp; Projects</h2>
             <ul class="compact-list">
                 <li>
-                    <strong>WiFiGPT &rarr; Locaris / WiFi telemetry localization</strong> (2025&ndash;Present). WiFiGPT first framed
-                    CSI, RSSI, and FTM telemetry as a sequence-modeling problem for decoder-only transformers; Locaris extends
-                    that line into a compact, telemetry-agnostic localization model. The Locaris arXiv preprint reports sub-meter
-                    accuracy with a few hundred samples, robustness under missing APs, and telemetry-agnostic support; the UC
-                    technology-transfer record lists the related WiFiGPT disclosure as Tech ID 34231 / UC Case 2026-577-0;
-                    a Locaris provisional patent has been filed.
-                    <span class="project-links">
-                        <a href="https://arxiv.org/abs/2505.15835">WiFiGPT arXiv</a> &middot;
-                        <a href="https://arxiv.org/abs/2510.11926">Locaris arXiv</a> &middot;
-                        <a href="https://www.linkedin.com/posts/nayan-bhatia_indoor-localization-using-compact-telemetry-agnostic-activity-7426308848866746369-R3nw">PerCom 2026 WiP announcement</a> &middot;
-                        <a href="https://techtransfer.universityofcalifornia.edu/NCD/34231.html">UC Tech Transfer</a>
+                    <strong>WiFiGPT &rarr; Locaris / WiFi telemetry localization</strong> (2025&ndash;Present).
+                    <span class="project-detail">
+                        <span><strong>WiFiGPT:</strong> GPT-based indoor localization from heterogeneous WiFi telemetry, including CSI, RSSI, and FTM.</span>
+                        <span><strong>Locaris:</strong> Compact decoder-only LLM that treats each AP measurement as a token and ingests raw WiFi telemetry without preprocessing.</span>
+                        <span><strong>Result:</strong> Sub-meter RSSI/FTM localization, centimeter-level CSI results in WiFiGPT, and few-shot Locaris adaptation to unseen devices and deployments.</span>
+                        <span><strong>IP:</strong> WiFiGPT technology disclosure listed as Tech ID 34231 / UC Case 2026-577-0; WiFiGPT provisional patent filed.</span>
+                        <span class="project-links">
+                            <a href="https://arxiv.org/abs/2505.15835">WiFiGPT arXiv</a> &middot;
+                            <a href="https://arxiv.org/abs/2510.11926">Locaris arXiv</a> &middot;
+                            <a href="https://www.linkedin.com/posts/nayan-bhatia_indoor-localization-using-compact-telemetry-agnostic-activity-7426308848866746369-R3nw">PerCom 2026 WiP announcement</a> &middot;
+                            <a href="https://techtransfer.universityofcalifornia.edu/NCD/34231.html">UC Tech Transfer</a>
+                        </span>
                     </span>
                 </li>
                 <li>
-                    <strong>Pulse-Fi</strong> (2024&ndash;Present). Low-cost, contactless WiFi CSI system for heart-rate monitoring,
-                    with extended work on breathing-rate and apnea monitoring. The peer-reviewed DCOSS-IoT paper reports
-                    heart-rate monitoring from low-cost WiFi devices; the extended arXiv version covers cardiopulmonary and
-                    apnea monitoring. A Pulse-Fi utility provisional patent application has been filed under 35 USC 111(b).
-                    <span class="project-links">
-                        <a href="https://doi.org/10.1109/DCOSS-IoT65416.2025.00037">IEEE DOI</a> &middot;
-                        <a href="https://news.ucsc.edu/wp-content/uploads/2025/08/Pulse_Fi_short_paper_iotdcoss.pdf">paper PDF</a> &middot;
-                        <a href="https://arxiv.org/abs/2510.24744">extended arXiv</a> &middot;
-                        <a href="https://news.ucsc.edu/2025/09/pulse-fi-wifi-heart-rate/">UCSC News</a> &middot;
-                        <a href="https://www.eurekalert.org/news-releases/1096757">EurekAlert</a> &middot;
-                        <a href="https://www.edge-ai-vision.com/2026/04/non-contact-vital-sign-monitoring-using-low-cost-wifi-devices-a-presentation-from-the-university-of-california-santa-cruz/">Edge AI presentation</a> &middot;
-                        <a href="https://docs.google.com/document/d/1apvCe6O2L4QO3WVgRJ57CXE6EA1hj0WyMKnEwKQhvoQ/edit?usp=sharing">press compilation</a>
+                    <strong>Pulse-Fi</strong> (2024&ndash;Present).
+                    <span class="project-detail">
+                        <span><strong>Focus:</strong> Low-cost, contactless WiFi CSI sensing for heart-rate, breathing-rate, and apnea monitoring.</span>
+                        <span><strong>Publication:</strong> Peer-reviewed DCOSS-IoT paper plus extended cardiopulmonary arXiv version.</span>
+                        <span><strong>IP:</strong> Utility provisional patent application filed under 35 USC 111(b).</span>
+                        <span class="project-links">
+                            <a href="https://doi.org/10.1109/DCOSS-IoT65416.2025.00037">IEEE DOI</a> &middot;
+                            <a href="https://news.ucsc.edu/wp-content/uploads/2025/08/Pulse_Fi_short_paper_iotdcoss.pdf">paper PDF</a> &middot;
+                            <a href="https://arxiv.org/abs/2510.24744">extended arXiv</a> &middot;
+                            <a href="https://news.ucsc.edu/2025/09/pulse-fi-wifi-heart-rate/">UCSC News</a> &middot;
+                            <a href="https://www.eurekalert.org/news-releases/1096757">EurekAlert</a> &middot;
+                            <a href="https://www.edge-ai-vision.com/2026/04/non-contact-vital-sign-monitoring-using-low-cost-wifi-devices-a-presentation-from-the-university-of-california-santa-cruz/">Edge AI presentation</a> &middot;
+                            <a href="https://docs.google.com/document/d/1apvCe6O2L4QO3WVgRJ57CXE6EA1hj0WyMKnEwKQhvoQ/edit?usp=sharing">press compilation</a>
+                        </span>
                     </span>
                     <div class="media-row pulse-media">
                         <a href="https://news.ucsc.edu/2025/09/pulse-fi-wifi-heart-rate/">
@@ -215,26 +229,28 @@
                     and <a href="https://news.ycombinator.com/item?id=45127983">Hacker News discussion</a>.
                 </li>
                 <li>
-                    <strong><a href="https://ucbasicneeds.ucsc.edu">UC Essential Needs Directory</a> &amp;
-                    <a href="https://ucbasicneeds.ucsc.edu/ucen">Navigator</a></strong> (2021&ndash;Present). UC-wide resource
-                    directory and AI-powered Navigator for food, housing, health, transportation, legal, and financial-aid support.
-                    Built with the UC Essential Needs Consortium, CEJA, and UCSC campus partners.
-                    <span class="project-links">
-                        <a href="https://economicjustice.ucsc.edu/welcome-to-the-uc-enc-navigator/">CEJA Navigator page</a> &middot;
-                        <a href="https://news.ucsc.edu/2026/01/new-basic-needs-directory-provides-uc-students-with-one-stop-shop-for-resource-information/">UCSC launch story</a> &middot;
-                        <a href="https://www.universityofcalifornia.edu/press-room/university-california-sets-enrollment-records">UC enrollment record</a>
+                    <strong><a href="https://ucbasicneeds.ucsc.edu">UC Essential Needs Directory</a> &amp; <a href="https://ucbasicneeds.ucsc.edu/ucen">Navigator</a></strong> (2021&ndash;Present).
+                    <span class="project-detail">
+                        <span><strong>Focus:</strong> UC-wide web app for food, housing, health, transportation, legal, and financial-aid support.</span>
+                        <span><strong>Build:</strong> AI-powered Navigator and complete technical system with UC Essential Needs Consortium, CEJA, and UCSC partners.</span>
+                        <span class="project-links">
+                            <a href="https://economicjustice.ucsc.edu/welcome-to-the-uc-enc-navigator/">CEJA Navigator page</a> &middot;
+                            <a href="https://news.ucsc.edu/2026/01/new-basic-needs-directory-provides-uc-students-with-one-stop-shop-for-resource-information/">UCSC launch story</a> &middot;
+                            <a href="https://www.universityofcalifornia.edu/press-room/university-california-sets-enrollment-records">UC enrollment record</a>
+                        </span>
                     </span>
                 </li>
                 <li>
                     <strong><a href="https://inrg.engineering.ucsc.edu/project/nsb/">Network Simulation Bridge (NSB)</a></strong>.
-                    Open-source, platform-agnostic co-simulation tool connecting front-end applications to back-end network simulators
-                    such as OMNeT++ and ns-3. Published at ACM Q2SWinet 2023, presented as an IEEE ICDCS 2025 tutorial, and supported
-                    by NSF POSE Award 2449377.
-                    <span class="project-links">
-                        <a href="https://doi.org/10.1145/3616391.3622771">ACM DOI</a> &middot;
-                        <a href="https://github.com/nsb-ucsc/nsb">GitHub</a> &middot;
-                        <a href="https://icdcs2025.icdcs.org/tutorial-network-simulation-bridge-bridging-distributed-applications-with-network-simulators/">ICDCS tutorial</a> &middot;
-                        <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2449377">NSF award</a>
+                    <span class="project-detail">
+                        <span><strong>Focus:</strong> Open-source co-simulation bridge between front-end apps and OMNeT++ / ns-3 network simulators.</span>
+                        <span><strong>Evidence:</strong> ACM Q2SWinet 2023 paper, IEEE ICDCS 2025 tutorial, and NSF POSE Award 2449377.</span>
+                        <span class="project-links">
+                            <a href="https://doi.org/10.1145/3616391.3622771">ACM DOI</a> &middot;
+                            <a href="https://github.com/nsb-ucsc/nsb">GitHub</a> &middot;
+                            <a href="https://icdcs2025.icdcs.org/tutorial-network-simulation-bridge-bridging-distributed-applications-with-network-simulators/">ICDCS tutorial</a> &middot;
+                            <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2449377">NSF award</a>
+                        </span>
                     </span>
                 </li>
             </ul>
@@ -278,11 +294,13 @@
                 <li>
                     <strong>SIP 2025 &mdash; CSE-07: Enhancing Wi-Fi Sensing Using Machine Learning Models with the 802.11 protocol.</strong>
                     Mentor for Ruoyi (Gloria) Tang, William Boyd Nzive, Vir Choudhary, Yuhan (Amy) Li, and Dhriti Agarwal.
+                    Yuhan (Amy) Li is continuing on a potential new WiFi sensing project.
                     <a href="https://docs.google.com/presentation/d/1lrvcXieQ_uYgXQha6kxhwcUhWhwyA1Fde8hxpQr_GmA/edit?usp=sharing">Slides</a>.
                 </li>
                 <li>
                     <strong>SIP 2024 &mdash; CSE-15: Enhancing Indoor Localization Using Machine Learning Models with the 802.11 Protocol.</strong>
                     Mentor for Pranay Kocheta, Axel Edin, Rafael Castro, and Ella Li.
+                    Pranay Kocheta is actively working on Pulse-Fi, Locaris, and future WiFi sensing research.
                     <a href="https://docs.google.com/presentation/d/1td6k3D4xJaq0B9XzkwB58UjQIgdOg1pPQesSkOtq24Y/edit?usp=sharing">Slides</a> &middot;
                     <a href="https://youtu.be/WMstv0ph-Z8?si=JQ7scVhbUvW3ZZzC">Project video</a>.
                 </li>
