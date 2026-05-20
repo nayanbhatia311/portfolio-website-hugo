@@ -45,6 +45,9 @@
         .project-links a { white-space: nowrap; }
         .project-detail { display: block; margin-top: 0.25rem; }
         .project-detail > span { display: block; margin-top: 0.18rem; }
+        .project-label { color: #333; font-size: 0.92rem; font-weight: 700; text-decoration: underline !important; text-decoration-thickness: 1px; text-underline-offset: 0.13em; }
+        a.project-label { color: #2563eb; text-decoration: underline !important; }
+        a.project-label:hover { color: #1d4ed8; }
         .project-detail .project-links { display: block; }
         .media-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 0.75rem 0; }
         .media-row a { display: inline-block; }
@@ -54,9 +57,10 @@
         #content .pulse-media a { display: block; }
         #content .pulse-media img { width: 100%; height: 220px; object-fit: cover; object-position: center; }
         #content .pulse-media .media-caption { max-width: none; }
-        .sih-media { display: block; max-width: 340px; }
-        #content .sih-media img { width: 100%; height: auto; max-height: 520px; object-fit: contain; background: #f8f8f8; }
-        #content .sih-media .media-caption { max-width: none; color: #666; }
+        .sih-media { display: grid; grid-template-columns: repeat(2, minmax(0, 260px)); align-items: end; gap: 0.85rem; justify-content: center; margin-left: auto; margin-right: auto; max-width: 560px; }
+        #content .sih-media a { display: block; }
+        #content .sih-media img { width: 100%; height: 420px; object-fit: contain; background: #f8f8f8; }
+        #content .sih-media .media-caption { max-width: none; color: #666; text-align: center; }
         .ucbn-media { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.85rem; max-width: 100%; }
         #content .ucbn-media img { width: 100%; height: 190px; object-fit: cover; object-position: center; }
         #content .ucbn-media .media-caption { max-width: none; color: #666; }
@@ -80,6 +84,8 @@
             .navbar-nav { gap: 1rem; }
             .proof-grid { grid-template-columns: 1fr; }
             .pulse-media { grid-template-columns: 1fr; }
+            .sih-media { grid-template-columns: 1fr; max-width: 340px; }
+            #content .sih-media img { height: auto; max-height: 520px; }
             .ucbn-media { grid-template-columns: 1fr; }
             #content .feature-image img { max-height: none; width: 100%; }
         }
@@ -150,7 +156,7 @@
                     <img src="https://qb3.ucsc.edu/files/2025/11/C26FE08F-DF64-4230-9B7F-D8ADBFAB0009-Copy.jpg" alt="Nayan Bhatia portrait for QB3 fellowship profile" class="contain-img">
                     <div>
                         <strong>QB3 Innovators Fellow</strong>
-                        <p>PulseFi commercialization and translational health-tech fellowship.</p>
+                        <p>Selected for QB3-UCSC GSR support for PulseFi commercialization.</p>
                     </div>
                 </a>
                 <a class="proof-card" href="https://youtu.be/3pCCZJbQK30">
@@ -174,10 +180,10 @@
                 <li>
                     <strong>WiFiGPT &rarr; Locaris / WiFi telemetry localization</strong> (2025&ndash;Present).
                     <span class="project-detail">
-                        <span><strong>WiFiGPT:</strong> GPT-based indoor localization from heterogeneous WiFi telemetry, including CSI, RSSI, and FTM.</span>
-                        <span><strong>Locaris:</strong> Compact decoder-only LLM that treats each AP measurement as a token and ingests raw WiFi telemetry without preprocessing.</span>
-                        <span><strong>Result:</strong> Sub-meter RSSI/FTM localization, centimeter-level CSI results in WiFiGPT, and few-shot Locaris adaptation to unseen devices and deployments.</span>
-                        <span><strong>IP:</strong> WiFiGPT technology disclosure listed as Tech ID 34231 / UC Case 2026-577-0; WiFiGPT provisional patent filed.</span>
+                        <span><a class="project-label" href="https://arxiv.org/abs/2505.15835">WiFiGPT:</a> GPT-based indoor localization from heterogeneous WiFi telemetry, including CSI, RSSI, and FTM.</span>
+                        <span><a class="project-label" href="https://arxiv.org/abs/2510.11926">Locaris:</a> Compact decoder-only LLM that treats each AP measurement as a token and ingests raw WiFi telemetry without preprocessing.</span>
+                        <span><span class="project-label">Result:</span> Sub-meter RSSI/FTM localization, centimeter-level CSI results in WiFiGPT, and few-shot Locaris adaptation to unseen devices and deployments.</span>
+                        <span><a class="project-label" href="https://techtransfer.universityofcalifornia.edu/NCD/34231.html">IP:</a> WiFiGPT technology disclosure listed as Tech ID 34231 / UC Case 2026-577-0; WiFiGPT provisional patent filed.</span>
                         <span class="project-links">
                             <a href="https://arxiv.org/abs/2505.15835">WiFiGPT arXiv</a> &middot;
                             <a href="https://arxiv.org/abs/2510.11926">Locaris arXiv</a> &middot;
@@ -189,9 +195,9 @@
                 <li>
                     <strong>Pulse-Fi</strong> (2024&ndash;Present).
                     <span class="project-detail">
-                        <span><strong>Focus:</strong> Low-cost, contactless WiFi CSI sensing for heart-rate, breathing-rate, and apnea monitoring.</span>
-                        <span><strong>Publication:</strong> Peer-reviewed DCOSS-IoT paper plus extended cardiopulmonary arXiv version.</span>
-                        <span><strong>IP:</strong> Utility provisional patent application filed under 35 USC 111(b).</span>
+                        <span><span class="project-label">Focus:</span> Low-cost, contactless WiFi CSI sensing for heart-rate, breathing-rate, and apnea monitoring.</span>
+                        <span><a class="project-label" href="https://doi.org/10.1109/DCOSS-IoT65416.2025.00037">Publication:</a> Peer-reviewed DCOSS-IoT paper plus extended cardiopulmonary arXiv version.</span>
+                        <span><span class="project-label">IP:</span> Utility provisional patent application filed under 35 USC 111(b).</span>
                         <span class="project-links">
                             <a href="https://doi.org/10.1109/DCOSS-IoT65416.2025.00037">IEEE DOI</a> &middot;
                             <a href="https://news.ucsc.edu/wp-content/uploads/2025/08/Pulse_Fi_short_paper_iotdcoss.pdf">paper PDF</a> &middot;
@@ -231,8 +237,8 @@
                 <li>
                     <strong><a href="https://ucbasicneeds.ucsc.edu">UC Essential Needs Directory</a> &amp; <a href="https://ucbasicneeds.ucsc.edu/ucen">Navigator</a></strong> (2021&ndash;Present).
                     <span class="project-detail">
-                        <span><strong>Focus:</strong> UC-wide web app for food, housing, health, transportation, legal, and financial-aid support.</span>
-                        <span><strong>Build:</strong> AI-powered Navigator and complete technical system with UC Essential Needs Consortium, CEJA, and UCSC partners.</span>
+                        <span><span class="project-label">Focus:</span> UC-wide web app for food, housing, health, transportation, legal, and financial-aid support.</span>
+                        <span><a class="project-label" href="https://economicjustice.ucsc.edu/welcome-to-the-uc-enc-navigator/">Build:</a> AI-powered Navigator and complete technical system with UC Essential Needs Consortium, CEJA, and UCSC partners.</span>
                         <span class="project-links">
                             <a href="https://economicjustice.ucsc.edu/welcome-to-the-uc-enc-navigator/">CEJA Navigator page</a> &middot;
                             <a href="https://news.ucsc.edu/2026/01/new-basic-needs-directory-provides-uc-students-with-one-stop-shop-for-resource-information/">UCSC launch story</a> &middot;
@@ -243,8 +249,8 @@
                 <li>
                     <strong><a href="https://inrg.engineering.ucsc.edu/project/nsb/">Network Simulation Bridge (NSB)</a></strong>.
                     <span class="project-detail">
-                        <span><strong>Focus:</strong> Open-source co-simulation bridge between front-end apps and OMNeT++ / ns-3 network simulators.</span>
-                        <span><strong>Evidence:</strong> ACM Q2SWinet 2023 paper, IEEE ICDCS 2025 tutorial, and NSF POSE Award 2449377.</span>
+                        <span><span class="project-label">Focus:</span> Open-source co-simulation bridge between front-end apps and OMNeT++ / ns-3 network simulators.</span>
+                        <span><a class="project-label" href="https://doi.org/10.1145/3616391.3622771">Evidence:</a> ACM Q2SWinet 2023 paper, IEEE ICDCS 2025 tutorial, and NSF POSE Award 2449377.</span>
                         <span class="project-links">
                             <a href="https://doi.org/10.1145/3616391.3622771">ACM DOI</a> &middot;
                             <a href="https://github.com/nsb-ucsc/nsb">GitHub</a> &middot;
@@ -310,6 +316,8 @@
             <ul class="compact-list">
                 <li>
                     <strong><a href="https://qb3.ucsc.edu/fellows/2025/12/nayan-bhatia-qb3-fellows-2026/">QB3-UCSC Graduate Fellowship for Innovators</a></strong>, 2026 (PulseFi).
+                    Selected as one of a few UCSC graduate students receiving GSR support for research poised for commercialization
+                    (<a href="https://qb3.ucsc.edu/fellowship-program/">program page</a>).
                 </li>
                 <li>
                     <strong>Biodiversity Seed Award</strong> ($2,500, 2021&ndash;22) and <strong>Agroecology Award</strong> ($3,000, 2022&ndash;23) &mdash; UC Basic Needs.
@@ -386,8 +394,14 @@
                     <strong>Winner, Smart India Hackathon 2019 (Software Edition).</strong>
                     Backend developer on Team Random-6; built "Finding the Nearest Parking Lot in Vicinity."
                     <div class="media-row sih-media">
-                        <img src="IMG-20190303-WA0059.jpg" alt="Nayan Bhatia holding Smart India Hackathon trophy and award">
-                        <span class="media-caption">Smart India Hackathon 2019 award media.</span>
+                        <a href="IMG-20190303-WA0059.jpg">
+                            <img src="IMG-20190303-WA0059.jpg" alt="Nayan Bhatia holding Smart India Hackathon trophy and award">
+                            <span class="media-caption">Smart India Hackathon 2019 award media.</span>
+                        </a>
+                        <a href="IMG-20190319-WA0015.jpg">
+                            <img src="IMG-20190319-WA0015.jpg" alt="Smart India Hackathon 2019 team award media">
+                            <span class="media-caption">Smart India Hackathon 2019 team media.</span>
+                        </a>
                     </div>
                 </li>
                 <li>
