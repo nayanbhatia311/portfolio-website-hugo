@@ -64,6 +64,13 @@
         .ucbn-media { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.85rem; max-width: 100%; }
         #content .ucbn-media img { width: 100%; height: 190px; object-fit: cover; object-position: center; }
         #content .ucbn-media .media-caption { max-width: none; color: #666; }
+        .sip-media { display: grid; grid-template-columns: 1fr; gap: 0.85rem; margin-left: auto; margin-right: auto; max-width: 820px; }
+        #content .sip-media a { display: block; }
+        #content .sip-media img { width: 100%; height: auto; max-height: 360px; object-fit: contain; object-position: center; background: #f8f8f8; }
+        #content .media-row.sip-media a .media-caption { max-width: none; color: #666; text-align: center; }
+        .outside-media { max-width: 420px; }
+        #content .outside-media img { width: 100%; height: auto; max-height: none; object-fit: cover; }
+        #content .outside-media .media-caption { max-width: none; color: #666; text-align: center; }
         .feature-image { margin: 0.75rem 0; }
         #content .feature-image img { border-radius: 6px; max-height: 260px; object-fit: contain; margin: 0; background: #f8f8f8; }
         #content ul.compact-list { padding-left: 1.25rem; margin-bottom: 1rem; }
@@ -87,6 +94,7 @@
             .sih-media { grid-template-columns: 1fr; max-width: 340px; }
             #content .sih-media img { height: auto; max-height: 520px; }
             .ucbn-media { grid-template-columns: 1fr; }
+            .sip-media { grid-template-columns: 1fr; }
             #content .feature-image img { max-height: none; width: 100%; }
         }
     </style>
@@ -256,8 +264,10 @@
                     <span class="project-detail">
                         <span><span class="project-label">Focus:</span> UC-wide web app for food, housing, health, transportation, legal, and financial-aid support.</span>
                         <span><a class="project-label" href="https://economicjustice.ucsc.edu/welcome-to-the-uc-enc-navigator/">Build:</a> AI-powered Navigator and complete technical system with UC Essential Needs Consortium, CEJA, and UCSC partners.</span>
+                        <span><a class="project-label" href="https://ucbn-console.ucsc.edu">Admin Console:</a> I maintain the UC Basic Needs admin panel for CRUD updates, public-site feedback review, and Ask AI feedback used to improve answer quality.</span>
                         <span class="project-links">
                             <a href="https://economicjustice.ucsc.edu/welcome-to-the-uc-enc-navigator/">CEJA Navigator page</a> &middot;
+                            <a href="https://ucbn-console.ucsc.edu">admin console</a> &middot;
                             <a href="https://news.ucsc.edu/2026/01/new-basic-needs-directory-provides-uc-students-with-one-stop-shop-for-resource-information/">UCSC launch story</a> &middot;
                             <a href="https://www.universityofcalifornia.edu/press-room/university-california-sets-enrollment-records">UC enrollment record</a>
                         </span>
@@ -318,6 +328,12 @@
                     Mentor for Ruoyi (Gloria) Tang, William Boyd Nzive, Vir Choudhary, Yuhan (Amy) Li, and Dhriti Agarwal.
                     Yuhan (Amy) Li is continuing on a potential new WiFi sensing project.
                     <a href="https://docs.google.com/presentation/d/1lrvcXieQ_uYgXQha6kxhwcUhWhwyA1Fde8hxpQr_GmA/edit?usp=sharing">Slides</a>.
+                    <div class="media-row sip-media">
+                        <a href="sip-07.png">
+                            <img src="sip-07.png" alt="SIP 2025 CSE-07 student group photo">
+                            <span class="media-caption">SIP 2025 CSE-07 WiFi sensing student group.</span>
+                        </a>
+                    </div>
                 </li>
                 <li>
                     <strong>SIP 2024 &mdash; CSE-15: Enhancing Indoor Localization Using Machine Learning Models with the 802.11 Protocol.</strong>
@@ -325,6 +341,12 @@
                     Pranay Kocheta is actively working on Pulse-Fi, Locaris, and future WiFi sensing research.
                     <a href="https://docs.google.com/presentation/d/1td6k3D4xJaq0B9XzkwB58UjQIgdOg1pPQesSkOtq24Y/edit?usp=sharing">Slides</a> &middot;
                     <a href="https://youtu.be/WMstv0ph-Z8?si=JQ7scVhbUvW3ZZzC">Project video</a>.
+                    <div class="media-row sip-media">
+                        <a href="sip-15.png">
+                            <img src="sip-15.png" alt="SIP 2024 CSE-15 student group photo">
+                            <span class="media-caption">SIP 2024 CSE-15 indoor localization student group.</span>
+                        </a>
+                    </div>
                 </li>
             </ul>
 
@@ -397,10 +419,21 @@
             <h2 id="earlier">Earlier &mdash; Hackathons, Competitions &amp; Leadership</h2>
             <ul class="compact-list">
                 <li>
+                    <strong><a href="https://devpost.com/software/nft-powered-resume-verification">NFT-Powered Resume Verification</a></strong>
+                    &mdash; Winner, Descope Challenge #2 at DeveloperWeek CloudX 2023 Hack.
+                    Built a Flask/React/Web3 platform that verifies resume claims using NFT transaction and token IDs, with smart-contract validation, PDF metadata embedding, and ATS-oriented authenticity scoring.
+                </li>
+                <li>
                     <strong>Winner, <a href="https://deepblue.co.in/">Mastek Project Deep Blue</a> Season 5</strong>
-                    (2019&ndash;2020). Team leader.
+                    (2019&ndash;2020). Team leader; built a visual-acuity testing app that used periscope reflections to virtually increase eye-chart distance, making accurate vision screening possible in small rooms.
                     <a href="https://youtu.be/sQGIJt0KPOI">Winning video</a> &middot;
                     <a href="https://youtu.be/3pCCZJbQK30">Project video</a>.
+                </li>
+                <li>
+                    <strong>Mastek Project Deep Blue Season 6 &mdash; Automation Society Security Task.</strong>
+                    Integrated visitor identity logging with timestamps and temperature checks; demonstrated a gait-recognition model using OpenPose and KNN with MLX90614 temperature sensing.
+                    <a href="https://drive.google.com/drive/u/0/folders/1QH8stCoYnsIxZd2__WremS6pum9ei7rP">Abstract and slides</a>.
+                    This was also where I first came across WiFi CSI and became interested enough to make it my PhD research direction.
                 </li>
                 <li>
                     <strong>Crop Yield Estimation (NDVI + OpenCV).</strong>
@@ -440,6 +473,12 @@
             <p>
                 <a href="https://youtu.be/Y_7RopKuwoQ?si=1pLkC7YJGYK4K3UD">15,000-foot skydiving experience over Monterey Bay, California</a>.
             </p>
+            <div class="media-row outside-media">
+                <a href="https://youtu.be/Y_7RopKuwoQ?si=1pLkC7YJGYK4K3UD">
+                    <img src="skydiving.JPG" alt="Nayan Bhatia skydiving over Monterey Bay">
+                    <span class="media-caption">Skydiving over Monterey Bay, California.</span>
+                </a>
+            </div>
 
             <h2 id="contact">Contact</h2>
             <div>
