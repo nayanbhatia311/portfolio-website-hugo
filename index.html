@@ -39,8 +39,8 @@
         #content .proof-card img.contain-img { height: 190px; object-fit: contain; background: #f8f8f8; }
         #content .proof-card img.portrait-crop { object-position: center 35%; }
         .proof-card div { padding: 0.75rem; }
-        .proof-card strong { display: block; margin-bottom: 0.2rem; }
-        .proof-card p { margin: 0; font-size: 0.92rem; line-height: 1.35; }
+        #content .proof-card strong { color: #1e3a8a !important; display: block; margin-bottom: 0.2rem; }
+        #content .proof-card p { color: #475569 !important; margin: 0; font-size: 0.92rem; line-height: 1.35; }
         .project-links { display: inline; }
         .project-links a { white-space: nowrap; }
         .project-detail { display: block; margin-top: 0.25rem; }
@@ -52,7 +52,7 @@
         .media-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 0.75rem 0; }
         .media-row a { display: inline-block; }
         #content .media-row img { height: 140px; width: auto; max-width: 100%; border-radius: 6px; object-fit: cover; margin: 0; }
-        #content .media-row a .media-caption { display: block; color: #666; font-size: 0.85rem; line-height: 1.25; margin-top: 0.35rem; max-width: 250px; }
+        #content .media-row a .media-caption { color: #666 !important; display: block; font-size: 0.85rem; line-height: 1.25; margin-top: 0.35rem; max-width: 250px; text-decoration: none; }
         .pulse-media { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.85rem; max-width: 100%; }
         #content .pulse-media a { display: block; }
         #content .pulse-media img { width: 100%; height: 220px; object-fit: cover; object-position: center; }
@@ -71,6 +71,12 @@
         .outside-media { max-width: 420px; }
         #content .outside-media img { width: 100%; height: auto; max-height: none; object-fit: cover; }
         #content .outside-media .media-caption { max-width: none; color: #666; text-align: center; }
+        .cdac-media { justify-content: center; margin-left: auto; margin-right: auto; max-width: 520px; }
+        #content .cdac-media img { width: 100%; height: auto; max-height: 320px; object-fit: contain; background: #f8f8f8; }
+        #content .media-row.cdac-media a .media-caption { max-width: none; color: #666; text-align: center; }
+        .colosseum-media { justify-content: center; margin-left: auto; margin-right: auto; max-width: 720px; }
+        #content .colosseum-media img { width: 100%; height: auto; max-height: 340px; object-fit: contain; background: #f8f8f8; }
+        #content .media-row.colosseum-media a .media-caption { max-width: none; color: #666; text-align: center; }
         .feature-image { margin: 0.75rem 0; }
         #content .feature-image img { border-radius: 6px; max-height: 260px; object-fit: contain; margin: 0; background: #f8f8f8; }
         #content ul.compact-list { padding-left: 1.25rem; margin-bottom: 1rem; }
@@ -109,6 +115,7 @@
             <div class="navbar-nav flex-row flex-wrap justify-content-center">
                 <a class="nav-item nav-link" href="https://www.linkedin.com/in/nayan-bhatia" title="LinkedIn">LinkedIn</a>
                 <a class="nav-item nav-link" href="https://scholar.google.com/citations?user=V7ODNwIAAAAJ&hl=en" title="Google Scholar">Google Scholar</a>
+                <a class="nav-item nav-link" href="https://orcid.org/0009-0001-3314-7928" title="ORCID">ORCID</a>
                 <a class="nav-item nav-link" href="pdfs/NayanBhatia_PhD_CSE_UCSC_June2027.pdf" title="Resume">Resume</a>
             </div>
         </nav>
@@ -222,10 +229,6 @@
                             <img src="https://news.ucsc.edu/wp-content/uploads/2025/08/20250814-Pulse-Fi-Research-EC-08-scaled-e1756416372585.jpg" alt="Pulse-Fi demo with WiFi hardware and heart-rate signal">
                             <span class="media-caption">Pulse-Fi demo with WiFi hardware and live signal trace.</span>
                         </a>
-                        <a href="https://news.ucsc.edu/2025/09/pulse-fi-wifi-heart-rate/">
-                            <img src="https://news.ucsc.edu/wp-content/uploads/2025/08/20250814-Pulse-Fi-Research-EC-07-scaled.jpg" alt="Katia Obraczka and Nayan Bhatia in the lab">
-                            <span class="media-caption">UCSC lab photo from the Pulse-Fi story.</span>
-                        </a>
                         <a href="https://www.ksbw.com/article/high-school-heart-rate-monitoring-uc-santa-cruz/69241438">
                             <img src="ksbw-news.png" alt="KSBW TV Pulse-Fi news segment media">
                             <span class="media-caption">KSBW TV coverage media for the Pulse-Fi paper.</span>
@@ -330,7 +333,7 @@
                     <a href="https://docs.google.com/presentation/d/1lrvcXieQ_uYgXQha6kxhwcUhWhwyA1Fde8hxpQr_GmA/edit?usp=sharing">Slides</a>.
                     <div class="media-row sip-media">
                         <a href="sip-07.png">
-                            <img src="sip-07.png" alt="SIP 2025 CSE-07 student group photo">
+                            <img src="sip-07-cropped.png" alt="SIP 2025 CSE-07 student group photo">
                             <span class="media-caption">SIP 2025 CSE-07 WiFi sensing student group.</span>
                         </a>
                     </div>
@@ -400,6 +403,12 @@
                     <strong>Young Gladiators / Colosseum Master Class</strong> (DARPA/NSF):
                     <a href="https://www.linkedin.com/posts/nayan-bhatia_hello-everyone-i-recently-participated-ugcPost-7207842404874297344-K-zy?utm_source=social_share_send&amp;utm_medium=member_desktop_web&amp;rcm=ACoAACzAeWUBafYUjFFwhSZ8aEHpLalXhnnh2QQ">LinkedIn post</a> &middot;
                     <a href="https://colosseum.sites.northeastern.edu/colosseum-young-gladiators-2022/">program page</a>.
+                    <div class="media-row colosseum-media">
+                        <a href="neu-colosseum-research-idea.png">
+                            <img src="neu-colosseum-research-idea.png" alt="Nayan Bhatia presenting a three-minute wireless research idea at the Colosseum program">
+                            <span class="media-caption">Sharing a three-minute wireless research idea with Colosseum researchers at Northeastern.</span>
+                        </a>
+                    </div>
                 </li>
                 <li>
                     <strong>Project judge</strong>, <a href="https://cruzhacks.com/">CruzHacks 2026</a>
@@ -433,12 +442,20 @@
                     <strong>Mastek Project Deep Blue Season 6 &mdash; Automation Society Security Task.</strong>
                     Integrated visitor identity logging with timestamps and temperature checks; demonstrated a gait-recognition model using OpenPose and KNN with MLX90614 temperature sensing.
                     <a href="https://drive.google.com/drive/u/0/folders/1QH8stCoYnsIxZd2__WremS6pum9ei7rP">Abstract and slides</a>.
-                    This was also where I first came across WiFi CSI and became interested enough to make it my PhD research direction.
+                    This was also where I first came across WiFi CSI and became obsessed enough to make it my PhD research direction.
                 </li>
                 <li>
                     <strong>Crop Yield Estimation (NDVI + OpenCV).</strong>
-                    Calculated plant health from drone imagery using the Normalized Difference Vegetation Index and OpenCV.
-                    <a href="https://www.youtube.com/@nayanbhatia2151">Video on my YouTube channel</a>.
+                    Estimated crop health from drone imagery using YOLOv3 object detection, NDVI vegetation-index calculation, and crop masking toward a Mask R-CNN-style segmentation pipeline.
+                    <a href="https://youtu.be/q8EYWLX-zpk?si=LGgeCQKgzlmqOJ5O">Video</a> &middot;
+                    <a href="https://drive.google.com/file/d/1RtiBAHAsse7QjwvjosNkZHEjjtZWCOnv/view?usp=share_link">Abstract</a> &middot;
+                    <a href="https://drive.google.com/file/d/1uXyprmT9bVKB28c8cSejii30dVZz20vd/view?usp=sharing">Final presentation</a>.
+                    <div class="media-row cdac-media">
+                        <a href="https://youtu.be/q8EYWLX-zpk?si=LGgeCQKgzlmqOJ5O">
+                            <img src="cdac-ai-hackathon-pune.jpg" alt="CDAC AI Hackathon Pune crop-yield estimation project">
+                            <span class="media-caption">CDAC AI Hackathon Pune crop-yield estimation project.</span>
+                        </a>
+                    </div>
                 </li>
                 <li>
                     <strong>Winner, Smart India Hackathon 2019 (Software Edition).</strong>
@@ -486,6 +503,7 @@
                 <a href="https://www.linkedin.com/in/nayan-bhatia" class="mr-2"><i class="fab fa-linkedin"></i> LinkedIn</a>
                 <a href="https://github.com/nayanbhatia311" class="mr-2"><i class="fab fa-github"></i> GitHub</a>
                 <a href="https://scholar.google.com/citations?user=V7ODNwIAAAAJ&hl=en" class="mr-2"><i class="fas fa-book"></i> Google Scholar</a>
+                <a href="https://orcid.org/0009-0001-3314-7928" class="mr-2"><i class="fas fa-id-badge"></i> ORCID</a>
                 <a href="https://www.youtube.com/@nayanbhatia2151" class="mr-2"><i class="fab fa-youtube"></i> YouTube</a>
                 <a href="https://nayanbhatia.com"><i class="fas fa-globe"></i> Website</a>
             </div>
