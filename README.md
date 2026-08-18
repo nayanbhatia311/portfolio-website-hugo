@@ -11,7 +11,6 @@ The project currently does not require a Hugo build step or a JavaScript package
 ## Structure
 
 - `index.html` - Main portfolio page.
-- `nsb.html` - Network Simulation Bridge project page.
 - `assets/` - Local images used by the site.
 - `pdfs/` - Resume and other PDF artifacts.
 - `sass/researcher.min.css` - Site stylesheet.
