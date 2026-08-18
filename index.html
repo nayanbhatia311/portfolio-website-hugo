@@ -80,6 +80,12 @@
         .zscaler-media { justify-content: center; margin-left: auto; margin-right: auto; max-width: 520px; }
         #content .zscaler-media img { width: 100%; height: auto; max-height: 320px; object-fit: contain; background: #f8f8f8; }
         #content .media-row.zscaler-media a .media-caption { max-width: none; color: #666; text-align: center; }
+        .nerd-media { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.85rem; margin: 0.75rem 0 1rem; max-width: 100%; }
+        #content .nerd-media a { display: block; min-width: 0; }
+        #content .nerd-media img { width: 100%; height: 240px; border-radius: 6px; object-fit: contain; background: #f8f8f8; margin: 0; }
+        #content .nerd-media .wide { grid-column: 1 / -1; }
+        #content .nerd-media .wide img { height: auto; max-height: 360px; }
+        #content .media-row.nerd-media a .media-caption { max-width: none; color: #666 !important; font-size: 0.85rem; line-height: 1.25; margin-top: 0.35rem; text-align: center; }
         .feature-image { margin: 0.75rem 0; }
         #content .feature-image img { border-radius: 6px; max-height: 260px; object-fit: contain; margin: 0; background: #f8f8f8; }
         #content ul.compact-list { padding-left: 1.25rem; margin-bottom: 1rem; }
@@ -104,6 +110,9 @@
             #content .sih-media img { height: auto; max-height: 520px; }
             .ucbn-media { grid-template-columns: 1fr; }
             .sip-media { grid-template-columns: 1fr; }
+            .nerd-media { grid-template-columns: 1fr; }
+            #content .nerd-media .wide { grid-column: auto; }
+            #content .nerd-media img { height: auto; max-height: 420px; }
             #content .feature-image img { max-height: none; width: 100%; }
         }
     </style>
@@ -531,6 +540,39 @@
                 <a href="https://orcid.org/0009-0001-3314-7928" class="mr-2"><i class="fas fa-id-badge"></i> ORCID</a>
                 <a href="https://www.youtube.com/@nayanbhatia2151" class="mr-2"><i class="fab fa-youtube"></i> YouTube</a>
                 <a href="https://nayanbhatia.com"><i class="fas fa-globe"></i> Website</a>
+            </div>
+
+            <h2 id="nerd-stuff">Nerd Stuff</h2>
+            <ul class="compact-list">
+                <li>
+                    <strong>Wi-Fi CSI hardware.</strong>
+                    Around 2020, very few commodity Wi-Fi chips exposed CSI cleanly, so we tracked down
+                    an Intel 5300 NIC and installed it locally to start collecting CSI. More recently, I
+                    have also worked with Intel AX210 capture pipelines using FeitCSI.
+                </li>
+                <li>
+                    <strong>Hydroponics science exhibition.</strong>
+                    In 9th standard, we built a small hydroponics setup for a school science exhibition,
+                    sourcing the mineral nutrients from a local store.
+                </li>
+            </ul>
+            <div class="media-row nerd-media">
+                <a href="assets/intel5300-installation.webp">
+                    <img src="assets/intel5300-installation.webp" alt="Intel 5300 NIC installed for local Wi-Fi CSI extraction">
+                    <span class="media-caption">Intel 5300 NIC installed locally for early CSI extraction experiments.</span>
+                </a>
+                <a href="assets/ax210.webp">
+                    <img src="assets/ax210.webp" alt="Intel AX210 Wi-Fi hardware used for CSI extraction with FeitCSI">
+                    <span class="media-caption">Intel AX210 setup used with FeitCSI for newer CSI capture work.</span>
+                </a>
+                <a class="wide" href="assets/csi-packet-capture-matrix.webp">
+                    <img src="assets/csi-packet-capture-matrix.webp" alt="CSI capture validation table across channels, widths, and formats">
+                    <span class="media-caption">CSI capture validation matrix across channel widths, frequencies, and PHY formats.</span>
+                </a>
+                <a class="wide" href="assets/hydroponics-science-exhibition.webp">
+                    <img src="assets/hydroponics-science-exhibition.webp" alt="Hydroponics project at a school science exhibition">
+                    <span class="media-caption">9th-standard hydroponics project at a school science exhibition.</span>
+                </a>
             </div>
         </div>
     </div>
