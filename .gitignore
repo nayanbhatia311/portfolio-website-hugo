@@ -1,0 +1,5 @@
+.DS_Store
+assets/.DS_Store
+
+# Keep full-resolution Zscaler source photos out of the deployable site.
+assets/zscaler_images/
